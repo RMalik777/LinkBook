@@ -25,11 +25,6 @@ export const LinkData = [
 		url: "https://www.linkedin.com/in/rafli-malik/",
 	},
 	{
-		title: "Line",
-		desc: "r.malik",
-		url: "https://line.me/ti/p/yb_6K7-AZi",
-	},
-	{
 		title: "Discord",
 		desc: "play7",
 		url: "https://discord.com/users/432877551640117249",
