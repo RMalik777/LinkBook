@@ -12,7 +12,7 @@
 	<div class="w-fit p-4 flex flex-col gap-4 rounded-xl bg-slate-200 shadow-sm">
 		{#each LinkData as link}
 			<a
-				class="w-auto px-4 py-2 flex flex-col rounded-lg text-lg bg-slate-300 shadow-md"
+				class="w-auto px-4 py-2 flex flex-col rounded-lg text-md bg-slate-300 shadow-md"
 				href={link.url}
 				target="_blank"
 				rel="noopener noreferrer"
