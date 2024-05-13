@@ -11,6 +11,14 @@
 	<meta
 		name="description"
 		content="Rafli Malik link dictionary for his social media, website and portofolio" />
+	<meta
+		name="theme-color"
+		media="(prefers-color-scheme: light)"
+		content="#6E3FBD" />
+	<meta
+		name="theme-color"
+		media="(prefers-color-scheme: dark)"
+		content="#222222" />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
 	<link
