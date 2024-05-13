@@ -2,7 +2,7 @@
 	import { browser } from "$app/environment";
 
 	import { LinkData } from "$lib/LinkData";
-	import portrait from "$lib/assets/photosquarezoom.jpg";
+	import portrait from "$lib/assets/photosquarezoom.webp";
 
 	let themeMode: string | null;
 
