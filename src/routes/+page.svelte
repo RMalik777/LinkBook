@@ -32,7 +32,7 @@
 </script>
 
 <div
-	class="pt-4 min-w-dvw w-full max-w-full min-h-dvh h-fit flex flex-col gap-12 items-center justify-between bg-[url('/src/lib/assets/bglight.svg')] dark:bg-[url('/src/lib/assets/bgdark.svg')] bg-center bg-cover duration-200 ease-out">
+	class="pt-4 min-w-dvw w-full max-w-full min-h-dvh h-fit flex flex-col gap-12 items-center justify-between bg-main-light dark:bg-main-dark bg-center bg-cover duration-200 ease-out">
 	<button
 		class="group self-end flex items-center gap-1 mr-4 px-4 py-2 sm:px-5 sm:py-3 rounded-lg bg-orange-200 dark:bg-orange-800 font-medium text-black dark:text-neutral-50 hover:bg-orange-300 dark:hover:bg-orange-700 duration-200 ease-out"
 		on:click={() => {

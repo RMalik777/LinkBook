@@ -1,12 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 export default {
 	content: ["./src/**/*.{html,js,svelte,ts}"],
-  darkMode: 'class',
+	darkMode: "class",
 	theme: {
 		extend: {
 			backgroundImage: {
-				"main-light": "url('./src/lib/assets/bglight.svg')",
-				"main-dark": "url('./src/lib/assets/bgdark.svg')"
+				"main-light": "url('$lib/assets/bglight.svg')",
+				"main-dark": "url('$lib/assets/bgdark.svg')"
 			},
 			colors: {
 				theme: {
