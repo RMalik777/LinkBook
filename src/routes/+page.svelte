@@ -64,6 +64,7 @@
 			}
 		}}
 		><span
+			translate="no"
 			class="material-symbols-rounded group-hover:material-fill duration-200 ease-out">
 			{themeMode === "Dark"
 				? "dark_mode"
@@ -77,6 +78,7 @@
 			alt="Portrait of Rafli Malik"
 			class="rounded-full size-1/5 sm:size-1/6" />
 		<h1
+			translate="no"
 			class="text-4xl sm:text-5xl font-medium text-theme-purple duration-200 ease-out">
 			Rafli Malik
 		</h1>
@@ -90,6 +92,7 @@
 				target="_blank">
 				<div class="flex flex-row items-start justify-start gap-2">
 					<span
+						translate="no"
 						class="material-symbols-rounded pt-1 group-hover:material-fill duration-150 ease-out">
 						{link.icon}
 					</span>
@@ -106,6 +109,7 @@
 	<footer class="mt-10 sm:mt-16 pb-5 flex flex-col items-center gap-1">
 		<p class="text-black dark:text-white duration-200 ease-out">
 			Free SVG Background by <a
+				translate="no"
 				target="_blank"
 				rel="noopener noreferrer"
 				href="https://bgjar.com"
@@ -114,6 +118,7 @@
 		</p>
 		<p>
 			Source available in <a
+				translate="no"
 				href="https://github.com/RMalik777/LinkBook"
 				target="_blank"
 				rel="noopener noreferrer"
@@ -121,6 +126,7 @@
 				>GitHub</a>
 		</p>
 		<a
+			translate="no"
 			href="https://www.raflimalik.com/"
 			target="_blank"
 			class="text-theme-green hover:underline">&copy; 2024 Rafli Malik</a>
