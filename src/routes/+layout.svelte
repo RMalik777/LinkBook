@@ -10,7 +10,7 @@
 	<title>Link Book | Rafli Malik</title>
 	<meta
 		name="description"
-		content="Rafli Malik link dictionary for his social media, website and portofolio" />
+		content="Rafli Malik link dictionary for his social media, website and portofolio." />
 	<meta
 		name="theme-color"
 		media="(prefers-color-scheme: light)"
