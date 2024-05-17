@@ -8,6 +8,23 @@
 
 <svelte:head>
 	<title>Link Book | Rafli Malik</title>
+	<script>
+		if (window.localStorage.getItem("theme") === "Dark") {
+			document.documentElement.style.colorScheme = "dark";
+			document.documentElement.className = "dark";
+		} else if (window.localStorage.getItem("theme") === "Light") {
+			document.documentElement.style.colorScheme = "light";
+			document.documentElement.classList.remove("dark");
+		} else {
+			if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+				document.documentElement.style.colorScheme = "dark";
+				document.documentElement.className = "dark";
+			} else {
+				document.documentElement.style.colorScheme = "light";
+				document.documentElement.classList.remove("dark");
+			}
+		}
+	</script>
 	<meta property="og:title" content="Link Book" />
 	<meta
 		property="og:description"
