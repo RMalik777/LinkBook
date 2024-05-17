@@ -8,6 +8,13 @@
 
 <svelte:head>
 	<title>Link Book | Rafli Malik</title>
+	<meta property="og:title" content="Link Book" />
+	<meta
+		property="og:description"
+		content="Link Book is a list of Rafli Malik's social, portofolia and contact. Find out more inside." />
+	<meta property="og:url" content="https://www.raflimalik.com/" />
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content="Rafli Malik" />
 	<meta
 		name="description"
 		content="Rafli Malik link dictionary for his social media, website and portofolio." />
