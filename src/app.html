@@ -9,8 +9,10 @@
 	<body data-sveltekit-preload-data="hover">
 		<script>
 			if (window.localStorage.getItem("theme") === "Dark") {
+				document.documentElement.style.colorScheme = "dark";
 				document.documentElement.className = "dark";
 			} else if (window.localStorage.getItem("theme") === "Light") {
+				document.documentElement.style.colorScheme = "dark";
 				document.documentElement.className = "light";
 			} else {
 				window.matchMedia("(prefers-color-scheme: dark)").matches

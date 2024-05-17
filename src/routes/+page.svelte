@@ -13,9 +13,13 @@
 			.matchMedia("(prefers-color-scheme: dark)")
 			.addEventListener("change", (e) => {
 				if (e.matches && !localStorage.theme) {
-					window.matchMedia("(prefers-color-scheme: dark)").matches
-						? (document.documentElement.className = "dark")
-						: (document.documentElement.className = "light");
+					if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+						document.documentElement.className = "dark";
+						document.documentElement.style.colorScheme = "dark";
+					} else {
+						document.documentElement.className = "light";
+						document.documentElement.style.colorScheme = "light";
+					}
 				}
 			});
 
@@ -23,9 +27,13 @@
 			.matchMedia("(prefers-color-scheme: light)")
 			.addEventListener("change", (e) => {
 				if (e.matches && !localStorage.theme) {
-					window.matchMedia("(prefers-color-scheme: dark)").matches
-						? (document.documentElement.className = "dark")
-						: (document.documentElement.className = "light");
+					if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+						document.documentElement.className = "dark";
+						document.documentElement.style.colorScheme = "dark";
+					} else {
+						document.documentElement.className = "light";
+						document.documentElement.style.colorScheme = "light";
+					}
 				}
 			});
 	}
@@ -43,6 +51,7 @@
 					window.localStorage.getItem("theme") === "Dark"
 				) {
 					document.documentElement.classList.remove("dark");
+					document.documentElement.style.colorScheme = "light";
 					window.localStorage.setItem("theme", "Light");
 					themeMode = "Light";
 				}
@@ -52,12 +61,14 @@
 					window.localStorage.getItem("theme") === "Light"
 				) {
 					document.documentElement.classList.remove("dark");
+					document.documentElement.style.removeProperty("color-scheme");
 					window.localStorage.removeItem("theme");
 					themeMode = null;
 				}
 				// if the theme is following system, change to dark
 				else {
 					document.documentElement.classList.add("dark");
+					document.documentElement.style.colorScheme = "dark";
 					window.localStorage.setItem("theme", "Dark");
 					themeMode = "Dark";
 				}
