@@ -12,12 +12,12 @@
 				document.documentElement.style.colorScheme = "dark";
 				document.documentElement.className = "dark";
 			} else if (window.localStorage.getItem("theme") === "Light") {
-				document.documentElement.style.colorScheme = "dark";
-				document.documentElement.className = "light";
+				document.documentElement.style.colorScheme = "light";
+				document.documentElement.classList.remove("dark");
 			} else {
 				window.matchMedia("(prefers-color-scheme: dark)").matches
 					? (document.documentElement.className = "dark")
-					: (document.documentElement.className = "light");
+					: document.documentElement.classList.remove("dark");
 			}
 		</script>
 		<div style="display: contents">%sveltekit.body%</div>

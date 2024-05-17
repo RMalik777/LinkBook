@@ -17,7 +17,7 @@
 						document.documentElement.className = "dark";
 						document.documentElement.style.colorScheme = "dark";
 					} else {
-						document.documentElement.className = "light";
+						document.documentElement.classList.remove("dark");
 						document.documentElement.style.colorScheme = "light";
 					}
 				}
@@ -31,7 +31,7 @@
 						document.documentElement.className = "dark";
 						document.documentElement.style.colorScheme = "dark";
 					} else {
-						document.documentElement.className = "light";
+						document.documentElement.classList.remove("dark");
 						document.documentElement.style.colorScheme = "light";
 					}
 				}
