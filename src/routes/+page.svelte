@@ -53,10 +53,10 @@
 </script>
 
 <div
-  class="pt-4 min-w-dvw w-full max-w-full min-h-dvh h-fit flex flex-col gap-12 items-center justify-between bg-main-light dark:bg-main-dark bg-center bg-cover duration-200 ease-out">
+  class="pt-4 min-w-dvw w-full max-w-full min-h-dvh h-fit flex flex-col gap-8 md:gap-12 items-center justify-between bg-main-light dark:bg-main-dark bg-center bg-cover duration-200 ease-out">
   <button
     type="button"
-    class="group self-end flex items-center gap-1 mr-4 px-4 py-2 sm:px-5 sm:py-3 rounded-lg bg-orange-200 dark:bg-orange-800 font-medium text-black dark:text-neutral-50 hover:bg-orange-300 dark:hover:bg-orange-700 duration-200 ease-out"
+    class="group self-end h-fit flex items-center gap-0 md:gap-1 mr-4 px-2 sm:px-4 md:px-5 py-1.5 sm:py-2 md:py-3 rounded-lg bg-orange-200 dark:bg-orange-800 text-sm md:text-base font-medium text-neutral-900 dark:text-neutral-50 hover:bg-orange-300 dark:hover:bg-orange-700 duration-200 ease-out"
     on:click={() => {
       if (browser) {
         // if the theme is dark, change to light
@@ -89,9 +89,9 @@
       }
     }}>
     {#if themeMode === "Dark"}
-      <Moon />
+      <Moon class={"h-4 sm:h-5 md:h-6"} />
     {:else}
-      <Sun />
+      <Sun class={"h-4 sm:h-5 md:h-6"} />
     {/if}
     {themeMode ? themeMode : "System"}</button>
   <header class="flex flex-col items-center justify-center gap-1">
@@ -140,7 +140,7 @@
     {/each}
   </main>
   <footer class="mt-10 sm:mt-16 pb-5 flex flex-col items-center gap-1">
-    <p class="text-black dark:text-white duration-200 ease-out">
+    <p class="text-neutral-900 dark:text-white duration-200 ease-out">
       Free SVG Background by <a
         translate="no"
         target="_blank"
