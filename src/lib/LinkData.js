@@ -1,18 +1,18 @@
 export const LinkData = [
 	{
-		icon: "tab",
+		icon: "web",
 		title: "Website",
 		desc: "www.raflimalik.com",
 		url: "https://www.raflimalik.com"
 	},
 	{
-		icon: "tab",
+		icon: "web",
 		title: "Blog Website (Coming Soon)",
 		desc: "blog.raflimalik.com",
 		url: "https://blog.raflimalik.com"
 	},
 	{
-		icon: "folder_data",
+		icon: "git",
 		title: "Github",
 		desc: "RMalik777",
 		url: "https://github.com/RMalik777"
@@ -30,7 +30,7 @@ export const LinkData = [
 		url: "mailto:Rafli.Malik@binus.ac.id"
 	},
 	{
-		icon: "groups",
+		icon: "linkedin",
 		title: "LinkedIn",
 		desc: "Rafli Malik",
 		url: "https://www.linkedin.com/in/rafli-malik/"
