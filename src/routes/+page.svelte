@@ -1,9 +1,9 @@
 <script lang="ts">
   import { browser } from "$app/environment";
 
-  import { LinkData } from "$lib/LinkData.js";
+  import { LinkData } from "$lib/LinkData";
 
-  import { Earth, FolderGit2, Mail, Linkedin, MessageSquare, Sun, Moon } from "lucide-svelte";
+  import { Sun, Moon } from "lucide-svelte";
 
   import portrait from "$lib/assets/photosquarezoom.webp";
   import githubBlack from "$lib/assets/githubmarkblack.png";
@@ -41,7 +41,7 @@
 </script>
 
 <div
-  class="min-w-dvw flex h-fit min-h-dvh w-full max-w-full flex-col items-center justify-between gap-8 bg-main-light bg-cover bg-center pt-4 duration-200 ease-out dark:bg-main-dark md:gap-12">
+  class="min-w-dvw flex h-fit min-h-dvh w-full max-w-full flex-col items-center justify-between gap-8 scroll-smooth bg-main-light bg-cover bg-center pt-4 antialiased duration-200 ease-out dark:bg-main-dark md:gap-12">
   <button
     type="button"
     class="group mr-4 flex h-fit items-center gap-0 self-end rounded-lg bg-orange-200 px-2 py-1.5 text-sm font-medium text-neutral-900 duration-200 ease-out hover:bg-orange-300 dark:bg-orange-800 dark:text-neutral-50 dark:hover:bg-orange-700 sm:px-4 sm:py-2 md:gap-1 md:px-5 md:py-3 md:text-base"
@@ -95,17 +95,7 @@
         target="_blank">
         <div class="flex flex-row items-start justify-start gap-2">
           <div class="mt-1">
-            {#if link.icon == "web"}
-              <Earth />
-            {:else if link.icon == "git"}
-              <FolderGit2 />
-            {:else if link.icon == "mail"}
-              <Mail />
-            {:else if link.icon == "linkedin"}
-              <Linkedin />
-            {:else if link.icon == "chat"}
-              <MessageSquare />
-            {/if}
+            <svelte:component this={link.icon} />
           </div>
           <div>
             <h2 class="text-xl font-medium tracking-tight duration-200 ease-out sm:text-2xl">
@@ -135,7 +125,12 @@
         target="_blank"
         rel="noopener noreferrer"
         class="flex items-center gap-1 text-blue-500 duration-200 ease-out after:content-['_↗'] hover:underline dark:text-blue-300"
-        ><img src={themeMode == "Dark" ? githubWhite : githubBlack} alt="" class="h-5" />GitHub</a>
+        ><img
+          loading="lazy"
+          decoding="async"
+          src={themeMode == "Dark" ? githubWhite : githubBlack}
+          alt=""
+          class="h-5" />GitHub</a>
     </p>
     <a translate="no" href="https://www.raflimalik.com/" target="_blank" class="text-theme-green hover:underline"
       >&copy; 2024 Rafli Malik</a>
