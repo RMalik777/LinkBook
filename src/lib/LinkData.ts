@@ -1,14 +1,14 @@
-import { Earth, FolderGit2, Mail, Linkedin, MessageSquare } from "lucide-svelte";
+import { Globe, FolderGit2, Mail, Linkedin, MessageSquare } from "lucide-svelte";
 
 export const LinkData = [
   {
-    icon: Earth,
+    icon: Globe,
     title: "Website",
     desc: "www.raflimalik.com",
     url: "https://www.raflimalik.com",
   },
   {
-    icon: Earth,
+    icon: Globe,
     title: "Blog Website (Coming Soon)",
     desc: "blog.raflimalik.com",
     url: "https://blog.raflimalik.com",
