@@ -112,7 +112,6 @@
   <footer class="mt-10 flex flex-col items-center gap-1 pb-5 sm:mt-16">
     <p class="text-neutral-900 duration-200 ease-out dark:text-white">
       Free SVG Background by <a
-        translate="no"
         target="_blank"
         rel="noopener noreferrer"
         href="https://bgjar.com"
@@ -120,7 +119,6 @@
     </p>
     <p class="flex flex-row items-center gap-2">
       Source available in <a
-        translate="no"
         href="https://github.com/RMalik777/LinkBook"
         target="_blank"
         rel="noopener noreferrer"

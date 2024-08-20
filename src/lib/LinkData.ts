@@ -9,7 +9,7 @@ export const LinkData = [
   },
   {
     icon: Globe,
-    title: "Blog Website (Coming Soon)",
+    title: "Blog Website",
     desc: "blog.raflimalik.com",
     url: "https://blog.raflimalik.com",
   },
