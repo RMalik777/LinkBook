@@ -94,7 +94,7 @@
   <main class="flex w-dvw min-w-fit max-w-full flex-col items-center gap-4 rounded-xl px-4 sm:px-0">
     {#each LinkData as link}
       <a
-        class="sm:text-md group flex w-full flex-col rounded-lg bg-purple-100 px-4 py-2 text-sm shadow-md duration-200 ease-out hover:bg-purple-200 hover:shadow-lg focus:bg-purple-200 focus:shadow-lg dark:bg-purple-900 dark:text-gray-200 dark:hover:bg-purple-800 dark:focus:bg-purple-800 sm:w-1/2 lg:w-1/3"
+        class="sm:text-md group flex w-full flex-col rounded-lg bg-purple-100 px-4 py-2 text-sm shadow-md duration-200 ease-out hover:bg-purple-200 hover:shadow-lg focus:bg-purple-200 focus:shadow-lg dark:bg-purple-900 dark:text-gray-200 dark:hover:bg-purple-800 dark:focus:bg-purple-800 sm:w-1/2 lg:w-2/5"
         href={link.url}
         target="_blank">
         <div class="flex flex-row items-start justify-start gap-2">
