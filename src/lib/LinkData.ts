@@ -1,6 +1,14 @@
-import { Globe, FolderGit2, Mail, Linkedin, MessageSquare } from "lucide-svelte";
+import { type Icon, Globe, FolderGit2, Mail, Linkedin, MessageSquare } from "lucide-svelte";
+import type { ComponentType } from "svelte";
 
-export const LinkData = [
+interface LinkType {
+  icon: ComponentType<Icon>;
+  title: string;
+  desc: string;
+  url: string;
+}
+
+export const LinkData: LinkType[] = [
   {
     icon: Globe,
     title: "Website",
