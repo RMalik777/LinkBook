@@ -8,6 +8,9 @@ export default {
         "main-light": "url('$lib/assets/bglight.svg')",
         "main-dark": "url('$lib/assets/bgdark.svg')",
       },
+      screens: {
+        xs: "480px",
+      },
       colors: {
         theme: {
           black: "#222222",
