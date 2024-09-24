@@ -58,7 +58,7 @@
   class="min-w-dvw flex h-fit min-h-dvh w-full max-w-full flex-col items-center justify-between gap-8 scroll-smooth bg-main-light bg-cover bg-center antialiased duration-200 ease-out dark:bg-main-dark md:gap-12">
   <button
     type="button"
-    class="group absolute right-4 top-4 z-10 flex h-fit items-center gap-0 self-end rounded-lg bg-orange-200 px-2 py-1.5 text-xs sm:text-sm font-medium text-neutral-900 duration-200 ease-out hover:bg-orange-300 hover:shadow-md focus:bg-orange-300 focus:shadow-md dark:bg-orange-800 dark:text-neutral-50 dark:hover:bg-orange-700 sm:gap-1 sm:px-4 sm:py-2"
+    class="group absolute right-4 top-4 z-10 flex h-fit items-center gap-0 self-end rounded-lg bg-orange-200 px-2 py-1.5 text-xs font-medium text-neutral-900 duration-200 ease-out hover:bg-orange-300 hover:shadow-md focus:bg-orange-300 focus:shadow-md dark:bg-orange-800 dark:text-neutral-50 dark:hover:bg-orange-700 sm:gap-1 sm:px-4 sm:py-2 sm:text-sm"
     on:click={() => {
       if (browser) {
         // if the theme is dark, change to light
