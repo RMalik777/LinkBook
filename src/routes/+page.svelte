@@ -3,8 +3,6 @@
 
   import { LinkData } from "$lib/LinkData";
 
-  import { Sun, Moon, SunMoon } from "lucide-svelte";
-
   import portrait from "$lib/assets/photosquarezoom.webp";
   import githubBlack from "$lib/assets/githubmarkblack.png";
   import githubWhite from "$lib/assets/githubmarkwhite.png";
@@ -96,6 +94,6 @@
     translate="no"
     href="https://www.raflimalik.com/"
     target="_blank"
-    class="bg-gradient-to-l from-purple-500 to-teal-500 bg-clip-text text-lg font-medium text-transparent duration-200 ease-out visited:text-purple-500 hover:font-semibold hover:text-purple-500 hover:underline focus:text-purple-500 focus:underline"
+    class=" bg-gradient-to-l from-purple-500 to-teal-500 bg-clip-text text-lg font-medium text-transparent duration-200 ease-out visited:text-purple-500 hover:font-semibold hover:text-purple-500 hover:underline focus:text-purple-500 focus:underline"
     >&copy; 2024 Rafli Malik</a>
 </footer>
