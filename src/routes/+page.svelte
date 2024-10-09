@@ -42,7 +42,9 @@
 
 <header class="flex flex-col items-center justify-center gap-1 pt-24">
   <img src={portrait} alt="Portrait of Rafli Malik" class="size-1/5 rounded-full sm:size-1/6" />
-  <h1 translate="no" class="text-4xl font-medium tracking-tighter text-theme-purple duration-200 ease-out sm:text-5xl">
+  <h1
+    translate="no"
+    class="text-4xl font-medium tracking-tighter text-purple-600 duration-200 ease-out dark:text-purple-500 sm:text-5xl">
     Rafli Malik
   </h1>
 </header>
@@ -68,13 +70,13 @@
     </a>
   {/each}
 </main>
-<footer class="mt-10 flex flex-col items-center gap-1 pb-5 sm:mt-16">
+<footer class="mt-10 flex flex-col items-center gap-1 pb-5 tracking-tight sm:mt-16">
   <p class="text-neutral-900 duration-200 ease-out dark:text-white">
     Free SVG Background by <a
       target="_blank"
       rel="noopener noreferrer"
       href="https://bgjar.com"
-      class="text-blue-500 duration-200 ease-out after:content-['_↗'] hover:underline focus:underline dark:text-blue-300"
+      class="text-blue-500 duration-200 ease-out after:content-['_↗'] visited:text-purple-500 hover:underline focus:underline dark:text-blue-400"
       >BGJar</a>
   </p>
   <p class="flex flex-row items-center gap-2">
@@ -82,7 +84,7 @@
       href="https://github.com/RMalik777/LinkBook"
       target="_blank"
       rel="noopener noreferrer"
-      class="flex items-center gap-1 text-blue-500 duration-200 ease-out after:content-['_↗'] hover:underline focus:underline dark:text-blue-300"
+      class="flex items-center gap-1 text-blue-500 duration-200 ease-out after:content-['_↗'] visited:text-purple-500 hover:underline focus:underline dark:text-blue-400"
       ><img
         loading="lazy"
         decoding="async"
@@ -94,5 +96,6 @@
     translate="no"
     href="https://www.raflimalik.com/"
     target="_blank"
-    class="text-theme-green hover:underline focus:underline">&copy; 2024 Rafli Malik</a>
+    class="bg-gradient-to-l from-purple-500 to-teal-500 bg-clip-text text-lg font-medium text-transparent duration-200 ease-out visited:text-purple-500 hover:font-semibold hover:text-purple-500 hover:underline focus:text-purple-500 focus:underline"
+    >&copy; 2024 Rafli Malik</a>
 </footer>
