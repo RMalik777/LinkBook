@@ -1,11 +1,14 @@
 <script lang="ts">
   import { browser, dev } from "$app/environment";
-  import { inject } from "@vercel/analytics";
-  import { Moon, Sun, SunMoon } from "lucide-svelte";
+  import type { Snippet } from "svelte";
   import "../app.css";
+
+  import { Moon, Sun, SunMoon } from "lucide-svelte";
+
+  import { inject } from "@vercel/analytics";
   inject({ mode: dev ? "development" : "production" });
 
-  let themeMode: string | null;
+  let themeMode: string | null = $state(null);
 
   // Detect if in browser and not in server
   if (browser) {
@@ -34,6 +37,8 @@
       }
     });
   }
+
+  let { children }: { children: Snippet } = $props();
 </script>
 
 <svelte:head>
@@ -59,7 +64,7 @@
   <button
     type="button"
     class="group absolute right-4 top-4 z-10 flex h-fit items-center gap-0 self-end rounded-lg bg-orange-200 px-2 py-1.5 text-xs font-medium text-neutral-900 duration-200 ease-out hover:bg-orange-300 hover:shadow-md focus:bg-orange-300 focus:shadow-md dark:bg-orange-800 dark:text-neutral-50 dark:hover:bg-orange-700 sm:gap-1 sm:px-4 sm:py-2 sm:text-sm"
-    on:click={() => {
+    onclick={() => {
       if (browser) {
         // if the theme is dark, change to light
         if (document.documentElement.classList.contains("dark") && window.localStorage.getItem("theme") === "Dark") {
@@ -97,5 +102,6 @@
       class={(themeMode !== "Light" && themeMode !== "Dark" ? "rotate-0 scale-100" : "-rotate-90 scale-0") +
         " absolute h-4 duration-300 ease-out sm:h-5 md:h-6"} />
     <span class="duration-200 ease-out">{themeMode ? themeMode : "System"}</span></button>
-  <slot />
+
+  {@render children?.()}
 </div>

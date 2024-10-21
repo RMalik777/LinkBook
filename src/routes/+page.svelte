@@ -7,7 +7,7 @@
   import githubBlack from "$lib/assets/githubmarkblack.png";
   import githubWhite from "$lib/assets/githubmarkwhite.png";
 
-  let themeMode: string | null;
+  let themeMode: string | null = $state(null);
 
   // Detect if in browser and not in server
   if (browser) {
@@ -54,7 +54,7 @@
       target="_blank">
       <div class="flex flex-row items-start justify-start gap-2">
         <div class="mt-1">
-          <svelte:component this={link.icon} />
+          <link.icon />
         </div>
         <div>
           <h2 class="text-xl font-medium tracking-tight duration-200 ease-out sm:text-2xl">
@@ -94,6 +94,6 @@
     translate="no"
     href="https://www.raflimalik.com/"
     target="_blank"
-    class=" bg-gradient-to-l from-purple-500 to-teal-500 bg-clip-text text-lg font-medium text-transparent duration-200 ease-out visited:text-purple-500 hover:font-semibold hover:text-purple-500 hover:underline focus:text-purple-500 focus:underline"
+    class="link bg-clip-text text-lg font-medium text-transparent visited:text-purple-500 hover:font-semibold focus:underline"
     >&copy; 2024 Rafli Malik</a>
 </footer>
