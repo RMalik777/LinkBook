@@ -1,4 +1,4 @@
-import { type Icon, Globe, FolderGit2, Mail, Linkedin, MessageSquare } from "lucide-svelte";
+import { type Icon, Globe, FolderGit2, Mail, Linkedin, MessageSquare, Instagram } from "lucide-svelte";
 import type { ComponentType } from "svelte";
 
 interface LinkType {
@@ -44,6 +44,12 @@ export const LinkData: LinkType[] = [
     title: "LinkedIn",
     desc: "Rafli Malik",
     url: "https://www.linkedin.com/in/rafli-malik/",
+  },
+  {
+    icon: Instagram,
+    title: "Instagram",
+    desc: "raflimalik__",
+    url: "https://instagram.com/raflimalik__",
   },
   {
     icon: MessageSquare,
