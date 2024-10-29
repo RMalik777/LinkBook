@@ -74,7 +74,7 @@
       target="_blank"
       rel="noopener noreferrer"
       href="https://bgjar.com"
-      class="text-blue-500 duration-200 ease-out after:content-['_↗'] visited:text-purple-500 hover:underline focus:underline dark:text-blue-400"
+      class="text-blue-500 duration-200 ease-out after:content-['_↗'] visited:text-purple-500 hover:underline focus-visible:underline dark:text-blue-400"
       >BGJar</a>
   </p>
   <p class="flex flex-row items-center gap-2">
@@ -82,7 +82,7 @@
       href="https://github.com/RMalik777/LinkBook"
       target="_blank"
       rel="noopener noreferrer"
-      class="flex items-center gap-1 text-blue-500 duration-200 ease-out after:content-['_↗'] visited:text-purple-500 hover:underline focus:underline dark:text-blue-400"
+      class="flex items-center gap-1 text-blue-500 duration-200 ease-out after:content-['_↗'] visited:text-purple-500 hover:underline focus-visible:underline dark:text-blue-400"
       ><img
         loading="lazy"
         decoding="async"
@@ -94,6 +94,6 @@
     translate="no"
     href="https://www.raflimalik.com/"
     target="_blank"
-    class="link bg-clip-text text-lg font-medium text-transparent visited:text-purple-500 hover:font-semibold focus:underline"
+    class="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-lg font-medium text-transparent duration-200 ease-out visited:text-purple-500 hover:font-semibold hover:underline focus-visible:font-semibold focus-visible:underline"
     >&copy; 2024 Rafli Malik</a>
 </footer>
