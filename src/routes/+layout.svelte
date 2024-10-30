@@ -57,6 +57,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
+  <script
+    defer
+    data-domain="raflimalik.com"
+    src="https://plausible.io/js/script.file-downloads.hash.outbound-links.js"></script>
 </svelte:head>
 
 <div
