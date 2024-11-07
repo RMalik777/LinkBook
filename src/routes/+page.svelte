@@ -82,26 +82,21 @@
       target="_blank"
       rel="noopener noreferrer"
       href="https://bgjar.com"
-      class="text-blue-500 duration-200 ease-out after:content-['_↗'] visited:text-purple-500 hover:underline focus-visible:underline dark:text-blue-400"
+      class="text-purple-500 duration-200 ease-out after:content-['_↗'] hover:underline focus-visible:underline dark:text-purple-400"
       >BGJar</a>
   </p>
-  <p class="flex flex-row items-center gap-2">
+  <p>
     Source available in <a
       href="https://github.com/RMalik777/LinkBook"
       target="_blank"
       rel="noopener noreferrer"
-      class="flex items-center gap-1 text-blue-500 duration-200 ease-out after:content-['_↗'] visited:text-purple-500 hover:underline focus-visible:underline dark:text-blue-400"
-      ><img
-        loading="lazy"
-        decoding="async"
-        src={themeMode == "Dark" ? githubWhite : githubBlack}
-        alt=""
-        class="h-5" />GitHub</a>
+      class=" text-purple-500 duration-200 ease-out after:content-['_↗'] hover:underline focus-visible:underline dark:text-purple-400">
+      GitHub</a>
   </p>
   <a
     translate="no"
     href="https://www.raflimalik.com/"
     target="_blank"
-    class="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-lg font-medium text-transparent duration-200 ease-out visited:text-purple-500 hover:font-semibold hover:underline focus-visible:font-semibold focus-visible:underline"
+    class="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-lg font-medium text-transparent duration-200 ease-out visited:text-purple-500 hover:font-semibold hover:underline focus-visible:font-semibold focus-visible:underline dark:from-purple-400 dark:to-pink-400"
     >&copy; 2024 Rafli Malik</a>
 </footer>
