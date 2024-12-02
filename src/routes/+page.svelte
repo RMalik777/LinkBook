@@ -4,8 +4,6 @@
   import { LinkData } from "$lib/LinkData";
 
   import portrait from "$lib/assets/photosquarezoom.webp";
-  import githubBlack from "$lib/assets/githubmarkblack.png";
-  import githubWhite from "$lib/assets/githubmarkwhite.png";
 
   let themeMode: string | null = $state(null);
 
