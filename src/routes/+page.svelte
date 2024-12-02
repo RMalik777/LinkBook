@@ -72,7 +72,7 @@
         </div>
       </div>
       <div
-        class="absolute inset-[50%] z-0 h-full w-full -translate-x-[50%] -translate-y-[50%] scale-x-0 opacity-0 duration-300 ease-in-out group-hover:scale-x-100 group-hover:rounded-lg group-hover:bg-purple-200 group-hover:opacity-100 group-focus-visible:w-full group-focus-visible:scale-x-100 group-focus-visible:rounded-lg group-focus-visible:bg-purple-200 group-focus-visible:opacity-100 dark:bg-purple-900 dark:group-hover:bg-purple-800 dark:group-focus-visible:bg-purple-800"
+        class="absolute inset-[50%] z-0 h-full w-full -translate-x-[50%] -translate-y-[50%] scale-x-0 opacity-0 duration-200 ease-in-out group-hover:scale-x-100 group-hover:rounded-lg group-hover:bg-purple-200 group-hover:opacity-100 group-focus-visible:w-full group-focus-visible:scale-x-100 group-focus-visible:rounded-lg group-focus-visible:bg-purple-200 group-focus-visible:opacity-100 dark:bg-purple-900 dark:group-hover:bg-purple-800 dark:group-focus-visible:bg-purple-800"
       ></div>
     </a>
   {/each}
