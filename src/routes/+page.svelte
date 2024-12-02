@@ -1,39 +1,6 @@
 <script lang="ts">
-  import { browser } from "$app/environment";
-
   import { LinkData } from "$lib/LinkData";
-
   import portrait from "$lib/assets/photosquarezoom.webp";
-
-  let themeMode: string | null = $state(null);
-
-  // Detect if in browser and not in server
-  if (browser) {
-    themeMode = window.localStorage.getItem("theme");
-    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
-      if (e.matches && !localStorage.theme) {
-        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-          document.documentElement.className = "dark";
-          document.documentElement.style.colorScheme = "dark";
-        } else {
-          document.documentElement.classList.remove("dark");
-          document.documentElement.style.colorScheme = "light";
-        }
-      }
-    });
-
-    window.matchMedia("(prefers-color-scheme: light)").addEventListener("change", (e) => {
-      if (e.matches && !localStorage.theme) {
-        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-          document.documentElement.className = "dark";
-          document.documentElement.style.colorScheme = "dark";
-        } else {
-          document.documentElement.classList.remove("dark");
-          document.documentElement.style.colorScheme = "light";
-        }
-      }
-    });
-  }
 </script>
 
 <header class="flex flex-col items-center justify-center gap-1 pt-24">
