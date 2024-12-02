@@ -1,9 +1,14 @@
-/** @type {import('tailwindcss').Config} */
+import type { Config } from "tailwindcss";
+import defaultTheme from "tailwindcss/defaultTheme";
+
 export default {
   content: ["./src/**/*.{html,js,svelte,ts}"],
   darkMode: "class",
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["Inter Variable", ...defaultTheme.fontFamily.sans],
+      },
       backgroundImage: {
         "main-light": "url('$lib/assets/bglight.svg')",
         "main-dark": "url('$lib/assets/bgdark.svg')",
@@ -24,4 +29,4 @@ export default {
     },
   },
   plugins: [],
-};
+} satisfies Config;
