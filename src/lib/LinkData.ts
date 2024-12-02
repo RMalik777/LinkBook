@@ -1,8 +1,7 @@
 import { type Icon, Globe, FolderGit2, Mail, Linkedin, MessageSquare, Instagram } from "lucide-svelte";
-import type { ComponentType } from "svelte";
 
 interface LinkType {
-  icon: ComponentType<Icon>;
+  icon: typeof Icon;
   title: string;
   desc: string;
   url: string;
