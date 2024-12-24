@@ -11,8 +11,8 @@
 
   let themeMode: string | null = $state(null);
 
-  // Detect if in browser and not in server
-  if (browser) {
+  // run after the component is mounted
+  $effect(() => {
     themeMode = window.localStorage.getItem("theme");
     window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
       if (e.matches && !localStorage.theme) {
@@ -37,7 +37,7 @@
         }
       }
     });
-  }
+  });
 
   let { children }: { children: Snippet } = $props();
 </script>
