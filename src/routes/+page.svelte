@@ -69,7 +69,7 @@
     translate="no"
     href="https://www.raflimalik.com/"
     target="_blank"
-    class="bg-linear-to-r from-purple-500 to-pink-500 bg-clip-text text-lg font-medium text-transparent duration-200 ease-out visited:text-purple-500 hover:font-semibold hover:underline focus-visible:font-semibold focus-visible:underline dark:from-purple-400 dark:to-pink-400"
+    class="bg-linear-to-r/oklch from-purple-500 to-pink-500 bg-clip-text text-lg font-medium text-transparent duration-200 ease-out visited:text-purple-500 hover:font-semibold hover:underline focus-visible:font-semibold focus-visible:underline dark:from-purple-400 dark:to-pink-400"
     >&copy; 2024 Rafli Malik</a
   >
 </footer>
