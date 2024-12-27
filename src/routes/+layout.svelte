@@ -59,11 +59,11 @@
 </svelte:head>
 
 <div
-  class="min-w-dvw flex h-fit min-h-dvh w-full max-w-full flex-col items-center justify-between gap-8 scroll-smooth bg-main-light bg-cover bg-center antialiased duration-200 ease-out dark:bg-main-dark md:gap-12"
+  class="bg-main-light dark:bg-main-dark flex h-fit min-h-dvh w-full max-w-full flex-col items-center justify-between gap-8 scroll-smooth bg-cover bg-center antialiased duration-200 ease-out md:gap-12"
 >
   <button
     type="button"
-    class="group absolute right-4 top-4 z-10 flex h-fit items-center gap-0 self-end rounded-lg bg-orange-200 px-2 py-1.5 text-xs font-medium text-neutral-900 duration-200 ease-out hover:bg-orange-300 hover:shadow-md focus-visible:bg-orange-300 focus-visible:shadow-md dark:bg-orange-800 dark:text-neutral-50 dark:hover:bg-orange-700 sm:gap-1 sm:px-4 sm:py-2 sm:text-sm"
+    class="group absolute top-4 right-4 z-10 flex h-fit items-center gap-0 self-end rounded-lg bg-orange-200 px-2 py-1.5 text-xs font-medium text-neutral-900 duration-200 ease-out hover:bg-orange-300 hover:shadow-md focus-visible:bg-orange-300 focus-visible:shadow-md sm:gap-1 sm:px-4 sm:py-2 sm:text-sm dark:bg-orange-800 dark:text-neutral-50 dark:hover:bg-orange-700"
     onclick={() => {
       if (browser) {
         // if the theme is dark, change to light
@@ -94,15 +94,15 @@
     }}
   >
     <Moon
-      class={(themeMode === "Dark" ? "rotate-0 scale-100" : "rotate-90 scale-0") +
+      class={(themeMode === "Dark" ? "scale-100 rotate-0" : "scale-0 rotate-90") +
         " relative h-4 duration-300 ease-out sm:h-5 md:h-6"}
     />
     <Sun
-      class={(themeMode === "Light" ? "rotate-0 scale-100" : "rotate-90 scale-0") +
+      class={(themeMode === "Light" ? "scale-100 rotate-0" : "scale-0 rotate-90") +
         " absolute h-4 duration-300 ease-out sm:h-5 md:h-6"}
     />
     <SunMoon
-      class={(themeMode !== "Light" && themeMode !== "Dark" ? "rotate-0 scale-100" : "-rotate-90 scale-0") +
+      class={(themeMode !== "Light" && themeMode !== "Dark" ? "scale-100 rotate-0" : "scale-0 -rotate-90") +
         " absolute h-4 duration-300 ease-out sm:h-5 md:h-6"}
     />
     <span class="duration-200 ease-out">{themeMode ? themeMode : "System"}</span></button

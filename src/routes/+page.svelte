@@ -13,15 +13,16 @@
   />
   <h1
     translate="no"
-    class="text-4xl font-medium tracking-tighter text-purple-600 duration-200 ease-out dark:text-purple-500 sm:text-5xl"
+    class="text-4xl font-medium tracking-tighter text-purple-600 duration-200 ease-out sm:text-5xl dark:text-purple-500"
   >
     Rafli Malik
   </h1>
 </header>
-<main class="flex w-dvw min-w-fit max-w-full flex-col items-center gap-4 rounded-xl px-4 sm:px-0">
-  {#each LinkData as link}
+<main class="flex w-dvw max-w-full min-w-fit flex-col items-center gap-4 rounded-xl px-4 sm:px-0">
+  {#each LinkData as link, index (link.url)}
     <a
-      class="sm:text-md group relative flex w-full flex-col rounded-lg bg-purple-100 px-4 py-2 text-sm shadow-sm duration-300 ease-out hover:shadow-md focus-visible:shadow-md dark:bg-purple-900 dark:text-neutral-200 sm:w-1/2 lg:w-2/5"
+      class="group relative flex w-full flex-col rounded-lg bg-purple-100 px-4 py-2 text-sm shadow-xs duration-300 ease-out hover:shadow-md focus-visible:shadow-md sm:w-1/2 sm:text-base lg:w-2/5 dark:bg-purple-900 dark:text-neutral-200 starting:translate-y-40"
+      style="transition-delay: {index * 50}ms;"
       href={link.url}
       target="_blank"
     >
@@ -68,7 +69,7 @@
     translate="no"
     href="https://www.raflimalik.com/"
     target="_blank"
-    class="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-lg font-medium text-transparent duration-200 ease-out visited:text-purple-500 hover:font-semibold hover:underline focus-visible:font-semibold focus-visible:underline dark:from-purple-400 dark:to-pink-400"
+    class="bg-linear-to-r from-purple-500 to-pink-500 bg-clip-text text-lg font-medium text-transparent duration-200 ease-out visited:text-purple-500 hover:font-semibold hover:underline focus-visible:font-semibold focus-visible:underline dark:from-purple-400 dark:to-pink-400"
     >&copy; 2024 Rafli Malik</a
   >
 </footer>

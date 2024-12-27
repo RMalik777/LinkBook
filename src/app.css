@@ -1,3 +1,20 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@variant dark (&:is(.dark *));
+
+@theme {
+  --font-sans: Inter Variable, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+
+  --background-image-main-light: url("$lib/assets/bglight.svg");
+  --background-image-main-dark: url("$lib/assets/bgdark.svg");
+
+  --breakpoint-xs: 480px;
+
+  --color-theme-black: #222222;
+  --color-theme-white: #f5f5f5;
+  --color-theme-purple: #6e3fbd;
+  --color-theme-green: #01a9be;
+  --color-theme-yellow: #feb102;
+  --color-theme-orange: #fb580f;
+}
