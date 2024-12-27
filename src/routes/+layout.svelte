@@ -59,7 +59,7 @@
 </svelte:head>
 
 <div
-  class="bg-main-light dark:bg-main-dark flex h-fit min-h-dvh w-full max-w-full flex-col items-center justify-between gap-8 scroll-smooth bg-cover bg-center antialiased duration-200 ease-out md:gap-12"
+  class="flex h-fit min-h-dvh w-full max-w-full flex-col items-center justify-between gap-8 scroll-smooth bg-main-light bg-cover bg-center antialiased duration-200 ease-out md:gap-12 dark:bg-main-dark"
 >
   <button
     type="button"

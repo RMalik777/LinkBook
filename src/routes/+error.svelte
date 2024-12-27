@@ -10,10 +10,10 @@
   <span class="absolute top-1/4 left-1/4 -z-50 aspect-square w-36 rounded-full bg-cyan-300 blur-[100px]"></span>
   <span class="absolute right-1/4 bottom-1/4 -z-50 aspect-square w-36 rounded-full bg-purple-300 blur-[100px]"></span>
   <section
-    class="xs:flex-row xs:gap-1 flex flex-col gap-2 bg-linear-to-l from-cyan-500 to-purple-500 bg-clip-text leading-none text-transparent"
+    class="flex flex-col gap-2 bg-linear-to-l from-cyan-500 to-purple-500 bg-clip-text leading-none text-transparent xs:flex-row xs:gap-1"
   >
     <h1 class="font-bold">{$page?.status}</h1>
-    <span class="xs:block hidden">|</span>
+    <span class="hidden xs:block">|</span>
     <p class="font-medium">{$page?.error?.message}</p>
   </section>
   <a
