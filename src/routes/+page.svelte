@@ -30,11 +30,11 @@
         <div class="mt-1">
           <link.icon />
         </div>
-        <div>
-          <h2 class="text-xl font-medium tracking-tight duration-200 ease-out sm:text-2xl">
+        <div class="leading-none">
+          <h2 class="text-xl font-medium tracking-tighter duration-200 ease-out sm:text-2xl">
             {link.title}
           </h2>
-          <p class="text-base tracking-tight duration-200 ease-out">
+          <p class="text-sm tracking-tight duration-200 ease-out sm:text-base">
             {link.desc}
           </p>
         </div>

@@ -18,3 +18,9 @@
   --color-theme-yellow: #feb102;
   --color-theme-orange: #fb580f;
 }
+
+@layer base {
+  * {
+    @apply border-neutral-300;
+  }
+}
