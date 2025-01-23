@@ -20,19 +20,19 @@ export const LinkData: LinkType[] = [
 		icon: Globe,
 		title: "Website",
 		desc: "www.raflimalik.com",
-		url: "https://www.raflimalik.com",
+		url: "https://raf.li/porto",
 	},
 	{
 		icon: Globe,
 		title: "Blog Website",
 		desc: "blog.raflimalik.com",
-		url: "https://blog.raflimalik.com",
+		url: "https://raf.li/blog",
 	},
 	{
 		icon: FolderGit2,
 		title: "Github",
 		desc: "RMalik777",
-		url: "https://github.com/RMalik777",
+		url: "https://raf.li/github",
 	},
 	{
 		icon: Mail,
@@ -50,13 +50,13 @@ export const LinkData: LinkType[] = [
 		icon: Linkedin,
 		title: "LinkedIn",
 		desc: "Rafli Malik",
-		url: "https://www.linkedin.com/in/rafli-malik/",
+		url: "https://raf.li/linkedin",
 	},
 	{
 		icon: Instagram,
 		title: "Instagram",
 		desc: "raflimalik__",
-		url: "https://instagram.com/raflimalik__",
+		url: "https://raf.li/instagram",
 	},
 	{
 		icon: MessageSquare,
