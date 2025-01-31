@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { page } from "$app/stores";
 	import { ArrowLeft } from "lucide-svelte";
-	// console.log($page);
 </script>
 
 <main
@@ -14,7 +13,7 @@
 		class="absolute right-1/4 bottom-1/4 -z-50 aspect-square w-36 rounded-full bg-purple-300 blur-[100px]"
 	></span>
 	<section
-		class="flex flex-col gap-2 bg-linear-to-l from-cyan-500 to-purple-500 bg-clip-text leading-none text-transparent xs:flex-row xs:gap-1"
+		class="flex flex-col gap-2 bg-linear-to-l/oklch from-cyan-500 to-purple-500 bg-clip-text leading-none text-transparent xs:flex-row xs:gap-1"
 	>
 		<h1 class="font-bold">{$page?.status}</h1>
 		<span class="hidden xs:block">|</span>
