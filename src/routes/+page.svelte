@@ -4,7 +4,7 @@
 </script>
 
 <header
-	class="mt-20 mb-10 flex flex-col items-center justify-center gap-3 overflow-hidden border border-purple-200 px-4 py-8 backdrop-blur-md backdrop-saturate-150 sm:mt-24 sm:mb-12 sm:gap-4 dark:border-purple-900"
+	class="mt-20 mb-10 flex flex-col items-center justify-center gap-3 overflow-hidden border border-purple-200 px-4 py-8 shadow-xs backdrop-blur-md backdrop-saturate-150 sm:mt-24 sm:mb-12 sm:gap-4 dark:border-purple-900"
 >
 	<div class="group relative size-20 sm:size-24">
 		<enhanced:img
