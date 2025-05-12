@@ -12,7 +12,7 @@
 		"lint": "eslint ."
 	},
 	"devDependencies": {
-		"@eslint/js": "^9.23.0",
+		"@eslint/js": "^9.26.0",
 		"@sveltejs/adapter-vercel": "^5.7.2",
 		"@sveltejs/enhanced-img": "^0.5.1",
 		"@sveltejs/kit": "^2.20.8",
