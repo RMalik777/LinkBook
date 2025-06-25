@@ -15,8 +15,8 @@ importers:
         specifier: ^1.5.0
         version: 1.5.0(@sveltejs/kit@2.22.0(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.34.7)(vite@6.3.5(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.6.1)))(svelte@5.34.7)(vite@6.3.5(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.6.1)))(svelte@5.34.7)
       lucide-svelte:
-        specifier: ^0.509.0
-        version: 0.509.0(svelte@5.34.7)
+        specifier: ^0.523.0
+        version: 0.523.0(svelte@5.34.7)
     devDependencies:
       '@eslint/js':
         specifier: ^9.26.0
@@ -1492,8 +1492,8 @@ packages:
   lru-cache@10.4.3:
     resolution: {integrity: sha512-JNAzZcXrCt42VGLuYz0zfAzDfAvJWW6AfYlDBQyDV5DClI2m5sAmK+OIO7s59XfsRsWHp02jAJrRadPRGTt6SQ==}
 
-  lucide-svelte@0.509.0:
-    resolution: {integrity: sha512-6U83jZ0RKvLYLGdx/hTqZyWcquwApQ2Q1E5bKFELXtOw7g8dk1P0qwbAQqs1fqWAtpNevtXTpgShHv/yWAcbjQ==}
+  lucide-svelte@0.523.0:
+    resolution: {integrity: sha512-aFLBJxFLY7e2Hu0yPb/vG+UwfAYWMkT4ZBhqC3wv9AmfNW7P/b8XDjfcSY1GREihBDgUo9fWoQiXVWsNHGIUJg==}
     peerDependencies:
       svelte: ^3 || ^4 || ^5.0.0-next.42
 
@@ -3437,7 +3437,7 @@ snapshots:
 
   lru-cache@10.4.3: {}
 
-  lucide-svelte@0.509.0(svelte@5.34.7):
+  lucide-svelte@0.523.0(svelte@5.34.7):
     dependencies:
       svelte: 5.34.7
 
