@@ -1,42 +1,68 @@
-# create-svelte
+# Link Book
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+[View](https://rafli.me)
 
-## Creating a project
+## Development
 
-If you're seeing this, you've probably already done this step. Congrats!
+### Prerequisites
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+Make sure you have installed the following tools:
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+- [Git](https://git-scm.com)
+- [Node.js](https://nodejs.org)
+- [pnpm](https://pnpm.io)
+- [VS Code](https://code.visualstudio.com) (or your favorite code editor)
 
-## Developing
+1. Clone this repository
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+   ```shell
+   git clone https://github.com/RMalik777/LinkBook.git
+   ```
 
-```bash
-npm run dev
+2. Open with your code editor
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+   ```shell
+   # vscode
+   code LinkBook
+   ```
 
-## Building
+3. Install dependencies
 
-To create a production version of your app:
+   ```shell
+   pnpm i
+   ```
 
-```bash
-npm run build
-```
+4. Run the development server
 
-You can preview the production build with `npm run preview`.
+   ```shell
+   pnpm run dev
+   ```
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+5. Read the documentation
+   - [Svelte](https://svelte.dev/docs/svelte/overview)
+   - [SvelteKit](https://svelte.dev/docs/kit/introduction)
+   - [Tailwind CSS](https://tailwindcss.com/docs)
 
-# LinkBook
+### Structure
 
-# LinkBook
+#### `layout.svelte`
+
+This is the root layout component. It wraps all the pages inside it.
+
+#### `page.svelte`
+
+This is the root page.
+
+### Deployment
+
+This project is deployed to [Vercel](https://vercel.com). Learn how to deploy your own SvelteKit project with [Vercel](https://svelte.dev/docs/kit/adapter-vercel).
+
+## Built With
+
+- [![image](https://img.shields.io/badge/SvelteKit-FF3E00?style=for-the-badge&logo=Svelte&logoColor=white)](https://kit.svelte.dev)
+- [![image](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com)
+- [![image](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com)
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).

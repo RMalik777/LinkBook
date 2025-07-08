@@ -64,14 +64,15 @@
 			rel="noopener noreferrer"
 			class=" text-purple-600 duration-200 ease-out after:content-['_↗'] hover:underline focus-visible:underline dark:text-purple-400"
 		>
-			GitHub</a
-		>
+			GitHub
+		</a>
 	</p>
 	<a
 		translate="no"
 		href="https://www.raflimalik.com/"
 		target="_blank"
-		class="bg-linear-to-r/oklch from-purple-500 to-fuchsia-500 bg-clip-text text-lg font-medium tracking-tighter text-transparent duration-200 ease-in visited:text-purple-500 hover:font-bold hover:tracking-tight hover:underline focus-visible:font-semibold focus-visible:underline dark:from-purple-400 dark:to-fuchsia-400"
-		>&copy; 2024 Rafli Malik</a
+		class="bg-linear-to-r/oklch from-purple-500 to-fuchsia-500 bg-clip-text text-lg font-medium tracking-tighter text-transparent decoration-purple-500 transition-colors duration-500 ease-in-out hover:from-fuchsia-500 hover:to-purple-500 hover:underline focus-visible:font-semibold focus-visible:underline dark:from-purple-400 dark:to-fuchsia-400 dark:decoration-purple-400 dark:hover:from-fuchsia-400 dark:hover:to-purple-400"
 	>
+		&copy; 2024 Rafli Malik
+	</a>
 </footer>

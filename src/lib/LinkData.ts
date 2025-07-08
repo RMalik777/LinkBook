@@ -6,7 +6,7 @@ import {
 	Linkedin,
 	MessageSquare,
 	Instagram,
-} from "lucide-svelte";
+} from "@lucide/svelte";
 
 interface LinkType {
 	icon: typeof Icon;
