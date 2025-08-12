@@ -11,17 +11,20 @@
 	--background-image-main-dark: url("$lib/assets/bgdark.svg");
 
 	--breakpoint-xs: 480px;
-
-	--color-theme-black: #222222;
-	--color-theme-white: #f5f5f5;
-	--color-theme-purple: #6e3fbd;
-	--color-theme-green: #01a9be;
-	--color-theme-yellow: #feb102;
-	--color-theme-orange: #fb580f;
 }
 
 @layer base {
 	* {
 		@apply border-neutral-300;
+	}
+}
+
+@layer base {
+	*,
+	::after,
+	::before,
+	::backdrop,
+	::file-selector-button {
+		border-color: var(--color-gray-200, currentcolor);
 	}
 }
