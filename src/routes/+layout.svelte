@@ -1,12 +1,12 @@
 <script lang="ts">
 	import { dev } from "$app/environment";
-	import type { Snippet } from "svelte";
 	import "@fontsource-variable/inter";
+	import type { Snippet } from "svelte";
 	import "../app.css";
 
-	import { ModeWatcher, setMode, userPrefersMode } from "mode-watcher";
-	import { Moon, Sun, SunMoon } from "lucide-svelte";
 	import { clsx } from "clsx";
+	import { Moon, Sun, SunMoon } from "lucide-svelte";
+	import { ModeWatcher, setMode, userPrefersMode } from "mode-watcher";
 
 	import { inject } from "@vercel/analytics";
 	inject({ mode: dev ? "development" : "production" });
