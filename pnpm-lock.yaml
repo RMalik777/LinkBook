@@ -28,8 +28,8 @@ importers:
         specifier: ^7.2.4
         version: 7.2.4(@sveltejs/kit@2.43.5(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.39.7)(vite@7.1.7(jiti@2.6.1)(lightningcss@1.30.1)(yaml@2.6.1)))(svelte@5.39.7)(vite@7.1.7(jiti@2.6.1)(lightningcss@1.30.1)(yaml@2.6.1)))(wrangler@4.40.3(@cloudflare/workers-types@4.20251004.0))
       '@sveltejs/enhanced-img':
-        specifier: ^0.8.2
-        version: 0.8.2(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.39.7)(vite@7.1.7(jiti@2.6.1)(lightningcss@1.30.1)(yaml@2.6.1)))(rollup@4.52.3)(svelte@5.39.7)(vite@7.1.7(jiti@2.6.1)(lightningcss@1.30.1)(yaml@2.6.1))
+        specifier: ^0.8.4
+        version: 0.8.4(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.39.7)(vite@7.1.7(jiti@2.6.1)(lightningcss@1.30.1)(yaml@2.6.1)))(rollup@4.52.3)(svelte@5.39.7)(vite@7.1.7(jiti@2.6.1)(lightningcss@1.30.1)(yaml@2.6.1))
       '@sveltejs/kit':
         specifier: ^2.43.5
         version: 2.43.5(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.39.7)(vite@7.1.7(jiti@2.6.1)(lightningcss@1.30.1)(yaml@2.6.1)))(svelte@5.39.7)(vite@7.1.7(jiti@2.6.1)(lightningcss@1.30.1)(yaml@2.6.1))
@@ -941,8 +941,8 @@ packages:
       '@sveltejs/kit': ^2.0.0
       wrangler: ^4.0.0
 
-  '@sveltejs/enhanced-img@0.8.2':
-    resolution: {integrity: sha512-fWhAJEjoFxL+2XzPxRT0kVnyWNYU+j7ZNHyAEBVoydFjIbRe4XMhOkT8cSvX5UB0pXWF8AvKpDeuH5pRZyTB2g==}
+  '@sveltejs/enhanced-img@0.8.4':
+    resolution: {integrity: sha512-/L12VUQj+ANIhskHT620jtxAs9wUPUIutgo37rwx5NgLnxOpVsP27fMiSpdIMgERldbgr6uRJ1WZGGOkzm7Vcg==}
     peerDependencies:
       '@sveltejs/vite-plugin-svelte': ^6.0.0
       svelte: ^5.0.0
@@ -1285,10 +1285,6 @@ packages:
 
   defu@6.1.4:
     resolution: {integrity: sha512-mEQCMmwJu317oSz8CwdIOdwf3xMif1ttiM8LTufzc3g6kR+9Pe236twL8j3IYT1F7GfRgGcW6MWxzZjLIkuHIg==}
-
-  detect-libc@2.1.1:
-    resolution: {integrity: sha512-ecqj/sy1jcK1uWrwpR67UhYrIFQ+5WlGxth34WquCbamhFA6hkkwiu37o6J5xCHdo1oixJRfVRw+ywV+Hq/0Aw==}
-    engines: {node: '>=8'}
 
   detect-libc@2.1.2:
     resolution: {integrity: sha512-Btj2BOOO83o3WyH59e8MgXsxEQVcarkUOpEYrubB0urwnN10yQ364rsiByU11nZlqWYZm05i/of7io4mzihBtQ==}
@@ -2719,7 +2715,7 @@ snapshots:
       worktop: 0.8.0-next.18
       wrangler: 4.40.3(@cloudflare/workers-types@4.20251004.0)
 
-  '@sveltejs/enhanced-img@0.8.2(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.39.7)(vite@7.1.7(jiti@2.6.1)(lightningcss@1.30.1)(yaml@2.6.1)))(rollup@4.52.3)(svelte@5.39.7)(vite@7.1.7(jiti@2.6.1)(lightningcss@1.30.1)(yaml@2.6.1))':
+  '@sveltejs/enhanced-img@0.8.4(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.39.7)(vite@7.1.7(jiti@2.6.1)(lightningcss@1.30.1)(yaml@2.6.1)))(rollup@4.52.3)(svelte@5.39.7)(vite@7.1.7(jiti@2.6.1)(lightningcss@1.30.1)(yaml@2.6.1))':
     dependencies:
       '@sveltejs/vite-plugin-svelte': 6.2.1(svelte@5.39.7)(vite@7.1.7(jiti@2.6.1)(lightningcss@1.30.1)(yaml@2.6.1))
       magic-string: 0.30.19
@@ -3045,8 +3041,6 @@ snapshots:
   deepmerge@4.3.1: {}
 
   defu@6.1.4: {}
-
-  detect-libc@2.1.1: {}
 
   detect-libc@2.1.2: {}
 
@@ -3631,7 +3625,7 @@ snapshots:
   sharp@0.34.4:
     dependencies:
       '@img/colour': 1.0.0
-      detect-libc: 2.1.1
+      detect-libc: 2.1.2
       semver: 7.7.2
     optionalDependencies:
       '@img/sharp-darwin-arm64': 0.34.4
