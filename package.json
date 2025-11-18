@@ -23,7 +23,7 @@
 		"@tailwindcss/vite": "4.1.17",
 		"@typescript-eslint/parser": "^8.47.0",
 		"clsx": "^2.1.1",
-		"eslint": "^9.39.0",
+		"eslint": "^9.39.1",
 		"eslint-config-prettier": "^10.1.8",
 		"eslint-plugin-svelte": "^3.13.0",
 		"globals": "^16.5.0",
