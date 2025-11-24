@@ -1,15 +1,11 @@
 <script lang="ts">
-	import { dev } from "$app/environment";
 	import "@fontsource-variable/inter";
 	import type { Snippet } from "svelte";
 	import "../app.css";
 
 	import { clsx } from "clsx";
-	import { Moon, Sun, SunMoon } from "lucide-svelte";
+	import { Moon, Sun, SunMoon } from "@lucide/svelte";
 	import { ModeWatcher, setMode, userPrefersMode } from "mode-watcher";
-
-	import { inject } from "@vercel/analytics";
-	inject({ mode: dev ? "development" : "production" });
 
 	let { children }: { children: Snippet } = $props();
 </script>
@@ -35,7 +31,7 @@
 
 <ModeWatcher />
 <div
-	class="flex h-fit min-h-dvh w-full max-w-full flex-col items-center justify-between scroll-smooth bg-white bg-radial from-purple-100 from-[2px] to-0% bg-[size:50px_50px] bg-fixed antialiased sm:from-[3px] sm:bg-[size:60px_60px] dark:bg-neutral-950 dark:from-purple-900/40"
+	class="flex h-fit min-h-dvh w-full max-w-full flex-col items-center justify-between scroll-smooth bg-white bg-radial from-purple-100 from-[2px] to-0% bg-size-[50px_50px] bg-fixed antialiased sm:from-[3px] sm:bg-size-[60px_60px] dark:bg-neutral-950 dark:from-purple-900/40"
 >
 	<button
 		type="button"
