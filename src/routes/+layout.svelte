@@ -7,6 +7,8 @@
 	import { Moon, Sun, SunMoon } from "@lucide/svelte";
 	import { ModeWatcher, setMode, userPrefersMode } from "mode-watcher";
 
+	import { Button } from "$lib/components/ui/button/index.js";
+
 	let { children }: { children: Snippet } = $props();
 </script>
 
@@ -31,41 +33,51 @@
 
 <ModeWatcher />
 <div
-	class="flex h-fit min-h-dvh w-full max-w-full flex-col items-center justify-between scroll-smooth bg-white bg-radial from-purple-100 from-[2px] to-0% bg-size-[50px_50px] bg-fixed antialiased sm:from-[3px] sm:bg-size-[60px_60px] dark:bg-neutral-950 dark:from-purple-900/40"
+	class="bg-white bg-radial from-purple-100 from-[2px] to-0% bg-size-[50px_50px] bg-fixed antialiased sm:from-[3px] sm:bg-size-[60px_60px] dark:bg-neutral-950 dark:from-purple-900/25"
 >
-	<button
-		type="button"
-		class="group absolute top-4 right-4 z-10 flex h-fit items-center gap-0 self-end border border-neutral-200 bg-transparent px-2 py-1.5 text-xs font-medium tracking-tight text-black shadow-xs backdrop-blur-xs duration-200 ease-out hover:bg-purple-700 hover:text-white focus-visible:bg-purple-700 focus-visible:text-white sm:gap-1.5 sm:px-4 sm:text-sm dark:border-neutral-700 dark:text-neutral-50 dark:hover:bg-purple-800/90 dark:focus-visible:bg-purple-800/90"
-		onclick={() => {
-			if (userPrefersMode.current === "light") setMode("dark");
-			else if (userPrefersMode.current === "dark") setMode("system");
-			else setMode("light");
-		}}
-	>
-		<Moon
-			class={clsx(
-				userPrefersMode.current === "dark" ? "scale-100 rotate-0" : "scale-0 rotate-90",
-				" relative h-4 duration-300 ease-out sm:h-5 md:h-6",
-			)}
-		/>
-		<Sun
-			class={clsx(
-				userPrefersMode.current === "light" ? "scale-100 rotate-0" : "scale-0 rotate-90",
-				" absolute h-4 duration-300 ease-out sm:h-5 md:h-6",
-			)}
-		/>
-		<SunMoon
-			class={clsx(
-				userPrefersMode.current !== "light" && userPrefersMode.current !== "dark"
-					? "scale-100 rotate-0"
-					: "scale-0 -rotate-90",
-				" absolute h-4 duration-300 ease-out sm:h-5 md:h-6",
-			)}
-		/>
-		<span class="duration-200 ease-out"
-			>{userPrefersMode.current ? userPrefersMode.current : "System"}</span
-		></button
-	>
-
-	{@render children?.()}
+	<header class="flex h-fit w-full max-w-full flex-col items-center justify-between">
+		<Button
+			type="button"
+			variant="outline"
+			class="z-10 m-2 self-end border-neutral-200 bg-transparent tracking-tight text-black backdrop-blur-xs duration-200 ease-out hover:bg-purple-700 hover:text-white focus-visible:bg-purple-700 focus-visible:text-white dark:border-neutral-700 dark:text-neutral-50 dark:hover:bg-purple-800/90 dark:focus-visible:bg-purple-800/90"
+			onclick={() => {
+				if (userPrefersMode.current === "light") setMode("dark");
+				else if (userPrefersMode.current === "dark") setMode("system");
+				else setMode("light");
+			}}
+		>
+			<div class="relative size-4">
+				<Sun
+					class={clsx(
+						userPrefersMode.current === "light"
+							? "scale-100 rotate-0 blur-none"
+							: "scale-0 rotate-90 blur-xs",
+						"absolute size-full transition-all!",
+					)}
+				/>
+				<Moon
+					class={clsx(
+						userPrefersMode.current === "dark"
+							? "scale-100 rotate-0 blur-none"
+							: "scale-0 rotate-90 blur-xs",
+						"absolute size-full transition-all!",
+					)}
+				/>
+				<SunMoon
+					class={clsx(
+						userPrefersMode.current !== "light" && userPrefersMode.current !== "dark"
+							? "scale-100 rotate-0 blur-none"
+							: "scale-0 -rotate-90 blur-xs",
+						"absolute size-full",
+					)}
+				/>
+			</div>
+			<span class="capitalize duration-200 ease-out">
+				{userPrefersMode.current ? userPrefersMode.current : "System"}
+			</span>
+		</Button>
+	</header>
+	<div class="flex flex-col items-center justify-start">
+		{@render children?.()}
+	</div>
 </div>
