@@ -37,6 +37,7 @@
 >
 	<header class="flex h-fit w-full max-w-full flex-col items-center justify-between">
 		<Button
+			size="sm"
 			type="button"
 			variant="outline"
 			class="z-10 m-2 self-end border-neutral-200 bg-transparent tracking-tight text-black backdrop-blur-xs duration-200 ease-out hover:bg-purple-700 hover:text-white focus-visible:bg-purple-700 focus-visible:text-white dark:border-neutral-700 dark:text-neutral-50 dark:hover:bg-purple-800/90 dark:focus-visible:bg-purple-800/90"
