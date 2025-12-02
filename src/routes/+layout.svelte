@@ -1,7 +1,10 @@
 <script lang="ts">
 	import "@fontsource-variable/inter";
 	import type { Snippet } from "svelte";
+	import { onMount } from "svelte";
 	import "../app.css";
+
+	import { configure } from "onedollarstats";
 
 	import { clsx } from "clsx";
 	import { Moon, Sun, SunMoon } from "@lucide/svelte";
@@ -10,6 +13,10 @@
 	import { Button } from "$lib/components/ui/button/index.js";
 
 	let { children }: { children: Snippet } = $props();
+
+	onMount(() => {
+		configure({ trackLocalhostAs: "local.raflimalik.com" });
+	});
 </script>
 
 <svelte:head>
