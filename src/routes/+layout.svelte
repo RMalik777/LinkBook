@@ -15,7 +15,7 @@
 	let { children }: { children: Snippet } = $props();
 
 	onMount(() => {
-		configure({ trackLocalhostAs: "local.raflimalik.com" });
+		configure({ trackLocalhostAs: "link.raflimalik.com" });
 	});
 </script>
 
