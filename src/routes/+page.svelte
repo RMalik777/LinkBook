@@ -7,7 +7,7 @@
 </script>
 
 <main class="flex w-full flex-col items-center gap-4 px-4 sm:w-1/2 sm:px-0 lg:w-2/5">
-	<!-- <div
+	<div
 		class="flex flex-col items-center justify-center gap-3 overflow-hidden border border-purple-200/80 px-4 py-8 shadow-xs backdrop-blur-md backdrop-saturate-150 sm:mt-16 sm:mb-12 sm:gap-4 dark:border-purple-900/50"
 	>
 		<div class="group relative size-20 sm:size-24">
@@ -29,7 +29,7 @@
 		>
 			Rafli Malik
 		</h1>
-	</div> -->
+	</div>
 	<div class="flex w-full flex-col gap-3">
 		{#each LinkData as group (group.name)}
 			<div class="relative mt-2">
