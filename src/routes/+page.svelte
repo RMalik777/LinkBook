@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { event } from "onedollarstats";
+
 	import { LinkData } from "$lib/LinkData";
 
 	import { Separator } from "$lib/components/ui/separator/index.js";
@@ -46,6 +48,11 @@
 					style="transition-delay: {index * 10}ms;"
 					href={link.url}
 					target="_blank"
+					onclick={() =>
+						event("Link Click", {
+							link_title: link.identifier,
+							link_url: link.url,
+						})}
 				>
 					<div class="z-10 flex flex-row items-center justify-start gap-3">
 						<div
