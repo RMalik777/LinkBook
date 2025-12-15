@@ -10,7 +10,7 @@
 
 <main class="flex w-full flex-col items-center gap-4 px-4 sm:w-1/2 sm:px-0 lg:w-2/5">
 	<div
-		class="flex flex-col items-center justify-center gap-3 overflow-hidden border border-purple-200/80 px-4 py-8 shadow-xs backdrop-blur-md backdrop-saturate-150 sm:mt-16 sm:mb-12 sm:gap-4 dark:border-purple-900/50"
+		class="flex flex-col items-center justify-center gap-3 overflow-hidden border border-purple-200/80 px-4 py-8 shadow-xs backdrop-blur-md backdrop-saturate-150 sm:mt-16 sm:mb-12 sm:gap-4 dark:border-purple-900/30"
 	>
 		<div class="group relative size-20 sm:size-24">
 			<enhanced:img
@@ -37,7 +37,7 @@
 			<div class="relative mt-2">
 				<Separator orientation="horizontal" class="absolute inset-0 top-1/2" />
 				<span
-					class="relative mx-auto block w-fit bg-purple-100 px-3 py-1 text-xs font-medium tracking-wide text-purple-700 uppercase dark:bg-purple-950/50 dark:text-purple-400"
+					class="relative mx-auto block w-fit bg-purple-100 px-3 py-1 text-xs font-medium tracking-wide text-purple-700 uppercase dark:bg-purple-950 dark:text-purple-300"
 				>
 					{group.name}
 				</span>
@@ -56,13 +56,13 @@
 				>
 					<div class="z-10 flex flex-row items-center justify-start gap-3">
 						<div
-							class="bg-purple-100 p-3 text-purple-700 transition-all duration-200 ease-out group-hover:scale-110 group-hover:rotate-6 group-hover:bg-purple-600 group-hover:text-white dark:bg-purple-900/30 dark:text-purple-400 dark:group-hover:bg-purple-700"
+							class="bg-purple-100 p-3 text-purple-700 transition-all duration-200 ease-out group-hover:scale-110 group-hover:rotate-6 group-hover:bg-purple-600 group-hover:text-white group-focus-visible:scale-110 group-focus-visible:rotate-6 group-focus-visible:bg-purple-600 group-focus-visible:text-white dark:bg-purple-900/30 dark:text-purple-400 dark:group-hover:bg-purple-700 dark:group-hover:text-purple-200 dark:group-focus-visible:bg-purple-700 dark:group-focus-visible:text-purple-200"
 						>
 							<link.icon class="p-0.5 duration-200 ease-in" />
 						</div>
 						<div class="leading-none">
 							<h2
-								class="text-lg font-medium tracking-tighter transition-colors duration-200 ease-out group-hover:text-purple-700 sm:text-xl dark:group-hover:text-purple-400"
+								class="text-lg font-medium tracking-tighter transition-colors duration-200 ease-out group-hover:text-purple-700 group-focus-visible:text-purple-700 sm:text-xl dark:group-hover:text-purple-400 dark:group-focus-visible:text-purple-400"
 							>
 								{link.title}
 							</h2>
@@ -79,7 +79,7 @@
 
 					<div class="absolute inset-0 z-1 bg-white dark:bg-neutral-950"></div>
 					<div
-						class="absolute inset-0 z-0 bg-linear-to-r/oklch from-purple-300/30 via-violet-300/30 to-fuchsia-300/30 opacity-0 blur-lg transition-all duration-300 ease-in-out group-hover:scale-105 group-hover:opacity-100 group-focus-visible:opacity-100 dark:from-purple-500/30 dark:via-violet-500/30 dark:to-fuchsia-500/30"
+						class="absolute inset-0 z-0 bg-linear-to-r/oklch from-purple-300/30 via-violet-300/30 to-fuchsia-300/30 opacity-0 blur-lg transition-all duration-300 ease-in-out group-hover:scale-105 group-hover:opacity-100 group-focus-visible:scale-105 group-focus-visible:opacity-100 dark:from-purple-500/30 dark:via-violet-500/30 dark:to-fuchsia-500/30"
 					></div>
 				</a>
 			{/each}
