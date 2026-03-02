@@ -37,7 +37,7 @@
 		"prettier-plugin-tailwindcss": "^0.7.2",
 		"svelte": "^5.53.6",
 		"svelte-check": "^4.4.3",
-		"svelte-eslint-parser": "^1.4.1",
+		"svelte-eslint-parser": "^1.5.1",
 		"tailwind-merge": "^3.5.0",
 		"tailwind-variants": "^3.2.2",
 		"tailwindcss": "4.2.0",
