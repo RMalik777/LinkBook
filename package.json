@@ -51,7 +51,7 @@
 	"type": "module",
 	"dependencies": {
 		"@fontsource-variable/inter": "^5.2.8",
-		"onedollarstats": "^0.0.18"
+		"onedollarstats": "^0.0.19"
 	},
 	"pnpm": {
 		"onlyBuiltDependencies": [
