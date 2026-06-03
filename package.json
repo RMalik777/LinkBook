@@ -40,7 +40,7 @@
 		"simple-icons": "^16.21.0",
 		"svelte": "^5.55.9",
 		"svelte-check": "^4.4.8",
-		"svelte-eslint-parser": "^1.6.1",
+		"svelte-eslint-parser": "^1.7.1",
 		"tailwind-merge": "^3.6.0",
 		"tailwind-variants": "^3.2.2",
 		"tailwindcss": "4.3.0",
