@@ -2,6 +2,7 @@
 	"name": "-10--sveltekit",
 	"version": "0.1.0",
 	"private": true,
+	"type": "module",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
@@ -51,15 +52,7 @@
 		"vite": "^8.0.14",
 		"wrangler": "^4.95.0"
 	},
-	"type": "module",
 	"dependencies": {
 		"onedollarstats": "^0.0.23"
-	},
-	"pnpm": {
-		"onlyBuiltDependencies": [
-			"esbuild",
-			"sharp",
-			"workerd"
-		]
 	}
 }
