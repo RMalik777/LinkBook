@@ -44,7 +44,7 @@
 			</div>
 			{#each group.links as link, index (link.url)}
 				<a
-					class="group relative flex w-full flex-col border border-purple-200/80 bg-white/80 p-4 px-5 py-4 text-sm break-all shadow-xs backdrop-blur-xs backdrop-saturate-150 transition-all duration-200 ease-out hover:scale-[1.02] hover:border-purple-300 hover:shadow-sm focus-visible:scale-[1.02] focus-visible:border-purple-300 focus-visible:shadow-sm sm:text-base dark:border-purple-900/30 dark:bg-neutral-950/80 dark:text-neutral-50 dark:hover:border-purple-800 starting:translate-y-40"
+					class="group relative flex w-full flex-col border border-border p-4 px-5 py-4 text-sm break-all shadow-xs backdrop-blur-xs backdrop-saturate-150 transition-all duration-200 ease-out hover:scale-[1.02] hover:border-purple-300 hover:shadow-sm focus-visible:scale-[1.02] focus-visible:border-purple-300 focus-visible:shadow-sm sm:text-base dark:hover:border-purple-800 starting:translate-y-20 text-foreground"
 					style="transition-delay: {index * 10}ms;"
 					href={link.url}
 					target="_blank"
@@ -56,13 +56,13 @@
 				>
 					<div class="z-10 flex flex-row items-center justify-start gap-3">
 						<div
-							class="bg-purple-100 p-3 text-purple-700 transition-all duration-200 ease-out group-hover:scale-110 group-hover:rotate-6 group-hover:bg-purple-600 group-hover:text-white group-focus-visible:scale-110 group-focus-visible:rotate-6 group-focus-visible:bg-purple-600 group-focus-visible:text-white dark:bg-purple-900/30 dark:text-purple-400 dark:group-hover:bg-purple-700 dark:group-hover:text-purple-200 dark:group-focus-visible:bg-purple-700 dark:group-focus-visible:text-purple-200"
+							class="bg-purple-100 p-3 text-purple-700 transition-all duration-200 ease-out group-hover:scale-110 group-hover:bg-purple-600 group-hover:text-white group-focus-visible:scale-110 group-focus-visible:bg-purple-600 group-focus-visible:text-white dark:bg-purple-900/30 dark:text-purple-400 dark:group-hover:bg-purple-700 dark:group-hover:text-purple-200 dark:group-focus-visible:bg-purple-700 dark:group-focus-visible:text-purple-200"
 						>
 							<link.icon class="p-0.5 duration-200 ease-in" />
 						</div>
 						<div class="leading-none">
 							<h2
-								class="text-lg font-medium tracking-tighter transition-colors duration-200 ease-out group-hover:text-purple-700 group-focus-visible:text-purple-700 sm:text-xl dark:group-hover:text-purple-400 dark:group-focus-visible:text-purple-400"
+								class="text-lg font-medium tracking-tight transition-colors duration-200 ease-out group-hover:text-purple-700 group-focus-visible:text-purple-700 sm:text-xl dark:group-hover:text-purple-400 dark:group-focus-visible:text-purple-400"
 							>
 								{link.title}
 							</h2>
@@ -73,11 +73,12 @@
 							</p>
 						</div>
 					</div>
+
 					<div
 						class="absolute inset-0 z-2 bg-linear-to-r/oklch from-purple-50 via-violet-50 to-fuchsia-50 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100 group-focus-visible:opacity-100 dark:from-purple-900/20 dark:via-violet-900/20 dark:to-fuchsia-950/40"
 					></div>
 
-					<div class="absolute inset-0 z-1 bg-white dark:bg-neutral-950"></div>
+					<div class="absolute inset-0 z-1 bg-background"></div>
 					<div
 						class="absolute inset-0 z-0 bg-linear-to-r/oklch from-purple-300/30 via-violet-300/30 to-fuchsia-300/30 opacity-0 blur-lg transition-all duration-300 ease-in-out group-hover:scale-105 group-hover:opacity-100 group-focus-visible:scale-105 group-focus-visible:opacity-100 dark:from-purple-500/30 dark:via-violet-500/30 dark:to-fuchsia-500/30"
 					></div>
