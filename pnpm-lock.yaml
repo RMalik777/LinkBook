@@ -67,8 +67,8 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0(svelte@5.56.5(@typescript-eslint/types@8.64.0))
       postcss:
-        specifier: ^8.5.19
-        version: 8.5.19
+        specifier: ^8.5.20
+        version: 8.5.20
       prettier:
         specifier: ^3.9.5
         version: 3.9.5
@@ -1589,6 +1589,10 @@ packages:
 
   postcss@8.5.19:
     resolution: {integrity: sha512-Mz8SaolMd8nB+G13WkORcxQKHZ/NE4xXevtkJHVuG+guo9/wYKlIMTKAqGdEmYOXR2ijPjTYNHssizdaVSUNdQ==}
+    engines: {node: ^10 || ^12 || >=14}
+
+  postcss@8.5.20:
+    resolution: {integrity: sha512-lW616l85ucIQL+FocMmL7pQFPqBmwejrCMg+iPxyImlrANNJG9NHq/RkyCZopDhd8C3LA03PHRJDjkbGu8vvug==}
     engines: {node: ^10 || ^12 || >=14}
 
   prelude-ls@1.2.1:
@@ -3125,6 +3129,12 @@ snapshots:
       util-deprecate: 1.0.2
 
   postcss@8.5.19:
+    dependencies:
+      nanoid: 3.3.16
+      picocolors: 1.1.1
+      source-map-js: 1.2.1
+
+  postcss@8.5.20:
     dependencies:
       nanoid: 3.3.16
       picocolors: 1.1.1
