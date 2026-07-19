@@ -31,7 +31,7 @@
 		"clsx": "^2.1.1",
 		"eslint": "^10.7.0",
 		"eslint-config-prettier": "^10.1.8",
-		"eslint-plugin-svelte": "^3.19.0",
+		"eslint-plugin-svelte": "^3.21.0",
 		"globals": "^17.6.0",
 		"mode-watcher": "^1.1.0",
 		"postcss": "^8.5.19",
