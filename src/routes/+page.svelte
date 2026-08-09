@@ -44,7 +44,7 @@
 			</div>
 			{#each group.links as link, index (link.url)}
 				<a
-					class="group relative flex w-full flex-col border border-border p-4 px-5 py-4 text-sm break-all shadow-xs backdrop-blur-xs backdrop-saturate-150 transition-all duration-200 ease-out hover:scale-[1.02] hover:border-purple-300 hover:shadow-sm focus-visible:scale-[1.02] focus-visible:border-purple-300 focus-visible:shadow-sm sm:text-base dark:hover:border-purple-800 starting:translate-y-20 text-foreground"
+					class="group relative flex w-full flex-col border border-border p-4 px-5 py-4 text-sm break-all text-foreground shadow-xs backdrop-blur-xs backdrop-saturate-150 transition-all duration-200 ease-out hover:scale-[1.02] hover:border-purple-300 hover:shadow-sm focus-visible:scale-[1.02] focus-visible:border-purple-300 focus-visible:shadow-sm sm:text-base dark:hover:border-purple-800 starting:translate-y-20"
 					style="transition-delay: {index * 10}ms;"
 					href={link.url}
 					target="_blank"
