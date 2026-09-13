@@ -27,7 +27,7 @@
 		"@sveltejs/vite-plugin-svelte": "^7.3.0",
 		"@tailwindcss/vite": "4.3.3",
 		"@typescript-eslint/parser": "^8.68.0",
-		"bits-ui": "^2.19.0",
+		"bits-ui": "^2.19.2",
 		"clsx": "^2.1.1",
 		"eslint": "^10.9.1",
 		"eslint-config-prettier": "^10.1.8",
