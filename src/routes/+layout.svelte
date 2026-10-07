@@ -9,7 +9,7 @@
 	import { Moon, Sun, SunMoon } from "@lucide/svelte";
 	import { ModeWatcher, setMode, userPrefersMode } from "mode-watcher";
 
-	import { Button } from "$lib/components/ui/button/index.js";
+	import { Button } from "#lib/components/ui/button/index.js";
 
 	let { children }: { children: Snippet } = $props();
 

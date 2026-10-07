@@ -1,11 +1,11 @@
 <script lang="ts">
 	import { event } from "onedollarstats";
 
-	import { LinkData } from "$lib/LinkData";
+	import { LinkData } from "#lib/LinkData.js";
 
-	import { Separator } from "$lib/components/ui/separator/index.js";
+	import { Separator } from "#lib/components/ui/separator/index.js";
 
-	import portrait from "$lib/assets/photosquarezoom.webp?enhanced";
+	import portrait from "#lib/assets/photosquarezoom.webp?enhanced";
 </script>
 
 <main class="flex w-full flex-col items-center gap-4 px-4 sm:w-1/2 sm:px-0 lg:w-2/5">
