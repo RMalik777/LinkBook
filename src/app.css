@@ -17,8 +17,35 @@
 		"JetBrains Mono Variable", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
 		"Liberation Mono", "Courier New", monospace;
 
-	--background-image-main-light: url("$lib/assets/bglight.svg");
-	--background-image-main-dark: url("$lib/assets/bgdark.svg");
+	--ease-snappy: cubic-bezier(0.22, 1, 0.36, 1);
+	--ease-spring: linear(
+		0,
+		0.009,
+		0.035 2.1%,
+		0.141,
+		0.281 6.7%,
+		0.723 12.9%,
+		0.938 16.7%,
+		1.017,
+		1.077,
+		1.121,
+		1.149 24.3%,
+		1.159,
+		1.163,
+		1.161,
+		1.154 29.9%,
+		1.129 32.8%,
+		1.051 39.6%,
+		1.017 43.1%,
+		0.991,
+		0.977 51%,
+		0.974 53.8%,
+		0.975 57.1%,
+		0.997 69.8%,
+		1.003 76.9%,
+		1.004 83.8%,
+		1
+	);
 
 	--breakpoint-xs: 480px;
 
@@ -95,6 +122,8 @@
 	--sidebar-accent-foreground: oklch(0.212 0.019 322.12);
 	--sidebar-border: oklch(0.922 0.005 325.62);
 	--sidebar-ring: oklch(0.711 0.019 323.02);
+	--dot: oklch(0.902 0.063 306.703);
+	--dot-active: oklch(0.627 0.265 303.9);
 }
 
 .dark {
@@ -129,6 +158,8 @@
 	--sidebar-accent-foreground: oklch(0.985 0 0);
 	--sidebar-border: oklch(1 0 0 / 10%);
 	--sidebar-ring: oklch(0.542 0.034 322.5);
+	--dot: oklch(0.438 0.218 303.724 / 55%);
+	--dot-active: oklch(0.714 0.203 305.504);
 }
 
 @theme inline {
@@ -178,5 +209,17 @@
 	}
 	html {
 		@apply font-sans;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		transition-delay: 0ms !important;
+		scroll-behavior: auto !important;
 	}
 }
