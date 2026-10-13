@@ -11,8 +11,33 @@
 
 	import DotGrid from "#lib/components/DotGrid.svelte";
 	import { Button } from "#lib/components/ui/button/index.js";
+	import { Profile } from "#lib/LinkData.js";
 
 	let { children }: { children: Snippet } = $props();
+
+	const siteUrl = "https://link.raflimalik.com/";
+
+	// Structured data so search engines link this page to the same person's other profiles.
+	// sameAs uses the final profile URLs, not the raf.li short links.
+	const personSchema = {
+		"@context": "https://schema.org",
+		"@type": "Person",
+		name: Profile.name,
+		jobTitle: Profile.bio,
+		url: siteUrl,
+		address: { "@type": "PostalAddress", addressLocality: Profile.location },
+		sameAs: [
+			"https://raflimalik.com/",
+			"https://blog.raflimalik.com/",
+			"https://github.com/RMalik777",
+			"https://www.linkedin.com/in/rafli-malik/",
+			"https://instagram.com/raflimalik__",
+		],
+	};
+	// Escape "<" so the JSON can never close the script tag early.
+	const personJsonLd =
+		`<script type="application/ld+json">${JSON.stringify(personSchema).replaceAll("<", "\\u003c")}</` +
+		`script>`;
 
 	onMount(() => {
 		configure({ trackLocalhostAs: "link.raflimalik.com" });
@@ -27,13 +52,18 @@
 		property="og:description"
 		content="Link Book is a list of Rafli Malik's social, portfolio and contact. Find out more inside."
 	/>
-	<meta property="og:url" content="https://www.raflimalik.com/" />
+	<meta property="og:url" content={siteUrl} />
 	<meta property="og:type" content="website" />
 	<meta property="og:site_name" content="Rafli Malik" />
-	<meta
-		name="description"
-		content="Collection of Rafli Malik link for his social media, website and portofolio."
-	/>
+	<meta property="og:image" content="{siteUrl}og.png" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<meta property="og:image:alt" content="Portrait of Rafli Malik, Software Engineer in Jakarta" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="description" content="Rafli Malik's social media, website and portfolio links." />
+	<link rel="canonical" href={siteUrl} />
+	<!-- eslint-disable-next-line svelte/no-at-html-tags -- static JSON-LD built from constants above -->
+	{@html personJsonLd}
 	<meta name="theme-color" media="(prefers-color-scheme: light)" content="#6E3FBD" />
 	<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#222222" />
 </svelte:head>
