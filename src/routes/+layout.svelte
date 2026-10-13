@@ -1,14 +1,15 @@
 <script lang="ts">
 	import type { Snippet } from "svelte";
 	import { onMount } from "svelte";
+	import { Toaster } from "#lib/components/ui/sonner/index.js";
 	import "../app.css";
 
 	import { configure } from "onedollarstats";
 
-	import { clsx } from "clsx";
 	import { Moon, Sun, SunMoon } from "@lucide/svelte";
 	import { ModeWatcher, setMode, userPrefersMode } from "mode-watcher";
 
+	import DotGrid from "#lib/components/DotGrid.svelte";
 	import { Button } from "#lib/components/ui/button/index.js";
 
 	let { children }: { children: Snippet } = $props();
@@ -38,50 +39,50 @@
 </svelte:head>
 
 <ModeWatcher />
+<Toaster />
+<!-- The CSS dot pattern is the fallback; DotGrid paints over it once mounted. -->
 <div
-	class="bg-white bg-radial from-purple-100 from-[2px] to-0% bg-size-[50px_50px] bg-fixed antialiased sm:from-[3px] sm:bg-size-[60px_60px] dark:bg-neutral-950 dark:from-purple-900/25"
+	class="relative isolate min-h-svh bg-white bg-radial from-(--dot) from-[1.5px] to-0% bg-size-[50px_50px] bg-fixed antialiased sm:from-[2.5px] sm:bg-size-[60px_60px] dark:bg-neutral-950"
 >
+	<DotGrid />
 	<header class="flex h-fit w-full max-w-full flex-col items-center justify-between">
 		<Button
+			variant="secondary"
 			size="sm"
-			type="button"
-			variant="outline"
-			class="z-10 m-2 self-end border-neutral-200 bg-transparent tracking-tight text-black backdrop-blur-xs duration-200 ease-out hover:bg-purple-700 hover:text-white focus-visible:bg-purple-700 focus-visible:text-white dark:border-neutral-700 dark:text-neutral-50 dark:hover:bg-purple-800/90 dark:focus-visible:bg-purple-800/90"
+			class="z-10 m-3 self-end font-heading text-xs tracking-wider uppercase"
 			onclick={() => {
 				if (userPrefersMode.current === "light") setMode("dark");
 				else if (userPrefersMode.current === "dark") setMode("system");
 				else setMode("light");
 			}}
 		>
-			<div class="relative size-4">
+			<span class="relative size-4">
 				<Sun
-					class={clsx(
+					class={[
 						userPrefersMode.current === "light"
-							? "scale-100 rotate-0 blur-none"
-							: "scale-0 rotate-90 blur-xs",
-						"absolute size-full transition-all!",
-					)}
+							? "scale-100 rotate-0 opacity-100"
+							: "scale-0 rotate-90 opacity-0",
+						"absolute size-full transition-[scale,rotate,opacity] duration-300 ease-snappy",
+					]}
 				/>
 				<Moon
-					class={clsx(
+					class={[
 						userPrefersMode.current === "dark"
-							? "scale-100 rotate-0 blur-none"
-							: "scale-0 rotate-90 blur-xs",
-						"absolute size-full transition-all!",
-					)}
+							? "scale-100 rotate-0 opacity-100"
+							: "scale-0 rotate-90 opacity-0",
+						"absolute size-full transition-[scale,rotate,opacity] duration-300 ease-snappy",
+					]}
 				/>
 				<SunMoon
-					class={clsx(
+					class={[
 						userPrefersMode.current !== "light" && userPrefersMode.current !== "dark"
-							? "scale-100 rotate-0 blur-none"
-							: "scale-0 -rotate-90 blur-xs",
-						"absolute size-full",
-					)}
+							? "scale-100 rotate-0 opacity-100"
+							: "scale-0 -rotate-90 opacity-0",
+						"absolute size-full transition-[scale,rotate,opacity] duration-300 ease-snappy",
+					]}
 				/>
-			</div>
-			<span class="capitalize duration-200 ease-out">
-				{userPrefersMode.current ? userPrefersMode.current : "System"}
 			</span>
+			<span><span class="sr-only">Theme: </span>{userPrefersMode.current ?? "System"}</span>
 		</Button>
 	</header>
 	<div class="flex flex-col items-center justify-start">
