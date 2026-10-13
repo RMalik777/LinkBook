@@ -2,37 +2,26 @@
 	import { resolve } from "$app/paths";
 	import { page } from "$app/state";
 
-	import { Button } from "#lib/components/ui/button/index.js";
-
 	import { ArrowLeft } from "@lucide/svelte";
 </script>
 
-<main
-	class="-mt-13 flex h-svh w-full flex-col items-center justify-center gap-6 text-center text-3xl backdrop-blur-3xl backdrop-saturate-150 sm:text-4xl md:text-5xl lg:text-6xl dark:backdrop-brightness-[.25] dark:backdrop-saturate-200"
->
-	<span
-		class="absolute top-1/4 left-1/4 -z-50 aspect-square w-36 rounded-full bg-cyan-300 blur-[100px]"
-	></span>
-	<span
-		class="absolute right-1/4 bottom-1/4 -z-50 aspect-square w-36 rounded-full bg-purple-300 blur-[100px]"
-	></span>
-	<section
-		class="flex flex-col gap-2 bg-linear-to-l/oklch from-cyan-500 to-purple-500 bg-clip-text leading-none text-transparent xs:flex-row xs:gap-1"
-	>
-		<h1 class="font-bold tracking-tighter tabular-nums">{page?.status}</h1>
-		<span class="hidden tracking-tighter xs:block">|</span>
-		<p class="font-medium tracking-tighter">{page?.error?.message}</p>
+<main class="-mt-14 flex h-svh w-full max-w-xl flex-col justify-center gap-8 px-4">
+	<section class="flex flex-col gap-3">
+		<p class="font-heading text-xs tracking-widest text-primary uppercase dark:text-purple-400">
+			Error {page.status}
+		</p>
+		<h1 class="text-5xl leading-[0.9] font-semibold tracking-tighter uppercase sm:text-6xl">
+			{page.error?.message ?? "Something went wrong"}
+		</h1>
 	</section>
-	<Button
-		variant="outline"
+	<a
 		href={resolve("/")}
-		class="group border-purple-500 bg-transparent text-purple-500 duration-200 ease-out hover:bg-purple-500 hover:text-white dark:border-purple-400 dark:text-purple-400 dark:hover:border-purple-500 dark:hover:text-white"
+		class="group flex w-fit items-center gap-2 border border-border bg-background px-4 py-2 font-heading text-xs tracking-wider uppercase outline-primary transition-[color,border-color,scale] duration-150 ease-snappy hover:border-primary/40 hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 active:scale-95 dark:hover:border-purple-400/40 dark:hover:text-purple-400"
 	>
-		<div class="relative flex w-full items-center px-2">
-			<ArrowLeft
-				class="absolute size-4 opacity-0 blur-xs transition-all duration-200 ease-out group-hover:-translate-x-3 group-hover:opacity-100 group-hover:blur-none"
-			/>
-			<span class="transition-transform duration-200 group-hover:translate-x-2">Home</span>
-		</div>
-	</Button>
+		<ArrowLeft
+			aria-hidden="true"
+			class="size-4 transition-transform duration-200 ease-snappy group-hover:-translate-x-0.5"
+		/>
+		Home
+	</a>
 </main>
