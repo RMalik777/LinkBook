@@ -32,7 +32,7 @@
 			clearTimeout(timeout);
 			timeout = setTimeout(() => (copied = false), 1500);
 		}}
-		aria-label={copied ? "Copied" : `Copy ${label}`}
+		aria-label="Copy {label}"
 		class="relative z-10 grid size-9 place-items-center text-muted-foreground outline-primary transition-[color,scale] duration-150 ease-snappy hover:text-primary focus-visible:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 active:scale-90 dark:hover:text-purple-400 dark:focus-visible:text-purple-400"
 	>
 		<span class="relative size-4">
@@ -51,4 +51,3 @@
 		</span>
 	</button>
 {/if}
-<span class="sr-only" aria-live="polite">{copied ? `${label} copied` : ""}</span>
