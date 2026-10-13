@@ -1,112 +1,105 @@
 <script lang="ts">
-	import { event } from "onedollarstats";
+	import { LinkData, Profile } from "#lib/LinkData.js";
 
-	import { LinkData } from "#lib/LinkData.js";
-
-	import { Separator } from "#lib/components/ui/separator/index.js";
+	import GlideList from "#lib/components/GlideList.svelte";
+	import LinkRow from "#lib/components/LinkRow.svelte";
 
 	import portrait from "#lib/assets/photosquarezoom.webp?enhanced";
+
+	const year = new Date().getFullYear();
+
+	// Running index across groups so the entrance stagger flows down the whole page.
+	const offsets = LinkData.map((_, i) =>
+		LinkData.slice(0, i).reduce((sum, group) => sum + group.links.length, 0),
+	);
 </script>
 
-<main class="flex w-full flex-col items-center gap-4 px-4 sm:w-1/2 sm:px-0 lg:w-2/5">
-	<div
-		class="flex flex-col items-center justify-center gap-3 overflow-hidden border border-purple-200/80 px-4 py-8 shadow-xs backdrop-blur-md backdrop-saturate-150 sm:mt-16 sm:mb-12 sm:gap-4 dark:border-purple-900/30"
+<main class="flex w-full max-w-xl flex-col gap-12 px-4 pt-6 pb-4 sm:gap-14 sm:pt-12">
+	<header
+		class="flex items-center gap-5 transition-[opacity,translate] duration-700 ease-snappy sm:gap-6 starting:translate-y-2 starting:opacity-0"
 	>
-		<div class="group relative size-20 sm:size-24">
+		<div class="relative size-20 shrink-0 sm:size-24">
 			<enhanced:img
 				src={portrait}
 				alt="Portrait of Rafli Malik"
 				loading="eager"
 				decoding="sync"
-				class="absolute inset-0 z-1 rounded-full bg-transparent"
+				class="absolute inset-0 z-1 size-full rounded-full"
 			/>
 			<div
-				class="absolute inset-0 z-0 rounded-full bg-cover bg-no-repeat blur-lg saturate-150"
-				style={`background: url(${portrait.img.src})`}
+				aria-hidden="true"
+				class="absolute inset-0 z-0 rounded-full bg-cover opacity-50 blur-md saturate-150"
+				style:background-image="url({portrait.img.src})"
 			></div>
 		</div>
-		<h1
-			translate="no"
-			class="text-center text-3xl font-medium tracking-tighter text-purple-600 duration-200 ease-out sm:text-4xl dark:text-purple-500"
-		>
-			Rafli Malik
-		</h1>
-	</div>
-	<div class="flex w-full flex-col gap-3">
-		{#each LinkData as group (group.name)}
-			<div class="relative mt-2">
-				<Separator orientation="horizontal" class="absolute inset-0 top-1/2" />
-				<span
-					class="relative mx-auto block w-fit bg-purple-100 px-3 py-1 text-xs font-medium tracking-wide text-purple-700 uppercase dark:bg-purple-950 dark:text-purple-300"
-				>
-					{group.name}
+		<div class="flex flex-col gap-3">
+			<h1
+				translate="no"
+				class="text-5xl leading-[0.9] font-semibold tracking-tight text-foreground uppercase sm:text-6xl"
+			>
+				{Profile.name}
+			</h1>
+			<p
+				class="flex w-fit flex-wrap items-center gap-x-2 gap-y-1 bg-background/85 py-0.5 pr-1 font-heading text-xs text-muted-foreground backdrop-blur-[2px] sm:text-sm"
+			>
+				<span class="whitespace-nowrap">{Profile.bio}</span>
+				<span class="flex items-center gap-1.5">
+					<span aria-hidden="true" class="size-1.5 rounded-full bg-primary dark:bg-purple-400"
+					></span>
+					{Profile.location}
 				</span>
-			</div>
-			{#each group.links as link, index (link.url)}
-				<a
-					class="group relative flex w-full flex-col border border-border p-4 px-5 py-4 text-sm break-all text-foreground shadow-xs backdrop-blur-xs backdrop-saturate-150 transition-all duration-200 ease-out hover:scale-[1.02] hover:border-purple-300 hover:shadow-sm focus-visible:scale-[1.02] focus-visible:border-purple-300 focus-visible:shadow-sm sm:text-base dark:hover:border-purple-800 starting:translate-y-20"
-					style="transition-delay: {index * 10}ms;"
-					href={link.url}
-					target="_blank"
-					onclick={() =>
-						event("Link Click", {
-							link_title: link.identifier,
-							link_url: link.url,
-						})}
-				>
-					<div class="z-10 flex flex-row items-center justify-start gap-3">
-						<div
-							class="bg-purple-100 p-3 text-purple-700 transition-all duration-200 ease-out group-hover:scale-110 group-hover:bg-purple-600 group-hover:text-white group-focus-visible:scale-110 group-focus-visible:bg-purple-600 group-focus-visible:text-white dark:bg-purple-900/30 dark:text-purple-400 dark:group-hover:bg-purple-700 dark:group-hover:text-purple-200 dark:group-focus-visible:bg-purple-700 dark:group-focus-visible:text-purple-200"
-						>
-							<link.icon class="p-0.5 duration-200 ease-in" />
-						</div>
-						<div class="leading-none">
-							<h2
-								class="text-lg font-medium tracking-tight transition-colors duration-200 ease-out group-hover:text-purple-700 group-focus-visible:text-purple-700 sm:text-xl dark:group-hover:text-purple-400 dark:group-focus-visible:text-purple-400"
-							>
-								{link.title}
-							</h2>
-							<p
-								class="text-sm tracking-tight text-muted-foreground transition-colors duration-200 ease-out sm:text-sm"
-							>
-								{link.desc}
-							</p>
-						</div>
-					</div>
+			</p>
+		</div>
+	</header>
 
-					<div
-						class="absolute inset-0 z-2 bg-linear-to-r/oklch from-purple-50 via-violet-50 to-fuchsia-50 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100 group-focus-visible:opacity-100 dark:from-purple-900/20 dark:via-violet-900/20 dark:to-fuchsia-950/40"
-					></div>
-
-					<div class="absolute inset-0 z-1 bg-background"></div>
-					<div
-						class="absolute inset-0 z-0 bg-linear-to-r/oklch from-purple-300/30 via-violet-300/30 to-fuchsia-300/30 opacity-0 blur-lg transition-all duration-300 ease-in-out group-hover:scale-105 group-hover:opacity-100 group-focus-visible:scale-105 group-focus-visible:opacity-100 dark:from-purple-500/30 dark:via-violet-500/30 dark:to-fuchsia-500/30"
-					></div>
-				</a>
-			{/each}
-		{/each}
-	</div>
-</main>
-<footer class="mt-10 flex flex-col items-center pb-6 text-center text-sm tracking-tight sm:mt-16">
-	<p>
-		Source available in <a
-			href="https://github.com/RMalik777/LinkBook"
-			target="_blank"
-			rel="noopener noreferrer"
-			class="group relative z-1 p-px text-purple-600 underline duration-200 ease-out after:content-['_↗'] hover:text-white hover:no-underline focus-visible:text-white focus-visible:no-underline dark:text-purple-400 dark:hover:text-neutral-950 dark:focus-visible:text-neutral-950"
+	{#each LinkData as group, groupIndex (group.name)}
+		<section
+			aria-labelledby="group-{group.name}"
+			class="-mx-2 flex flex-col gap-3 bg-background/85 px-2 pt-2 backdrop-blur-[2px] sm:-mx-3 sm:px-3"
 		>
-			GitHub
-			<span
-				class="absolute inset-0 -z-1 size-full origin-bottom scale-y-0 bg-neutral-950 transition-transform duration-200 ease-out group-hover:scale-y-100 group-focus-visible:scale-y-100 dark:bg-neutral-50"
-			></span>
-		</a>
-	</p>
+			<h2
+				id="group-{group.name}"
+				class="flex items-center gap-3 font-heading text-xs tracking-widest text-muted-foreground uppercase"
+			>
+				<span class="text-primary tabular-nums dark:text-purple-400">
+					{String(groupIndex + 1).padStart(2, "0")}
+				</span>
+				<span>/</span>
+				<span>{group.name}</span>
+				<span aria-hidden="true" class="h-px flex-1 bg-border"></span>
+			</h2>
+			<GlideList>
+				{#each group.links as link, index (link.url)}
+					<LinkRow {link} delay={(offsets[groupIndex] + index) * 40} />
+				{/each}
+			</GlideList>
+		</section>
+	{/each}
+</main>
+
+<footer
+	class="mt-6 flex w-full max-w-xl flex-wrap items-center justify-between gap-2 px-4 pb-8 font-heading text-xs text-muted-foreground sm:mt-10"
+>
 	<a
 		translate="no"
 		href="https://www.raflimalik.com/"
 		target="_blank"
-		class="bg-linear-to-r/oklch from-purple-500 to-fuchsia-500 bg-clip-text text-base font-medium tracking-tighter text-transparent decoration-purple-500 transition-colors duration-500 ease-in-out hover:from-fuchsia-500 hover:to-purple-500 hover:underline focus-visible:font-semibold focus-visible:underline dark:from-purple-400 dark:to-fuchsia-400 dark:decoration-purple-400 dark:hover:from-fuchsia-400 dark:hover:to-purple-400"
+		rel="noopener"
+		class="outline-primary transition-colors duration-150 hover:text-primary focus-visible:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 dark:hover:text-purple-400"
 	>
-		&copy; 2024 Rafli Malik
+		&copy; {year} Rafli Malik
+	</a>
+	<a
+		href="https://github.com/RMalik777/LinkBook"
+		target="_blank"
+		rel="noopener noreferrer"
+		class="group flex items-center gap-1 outline-primary transition-colors duration-150 hover:text-primary focus-visible:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 dark:hover:text-purple-400"
+	>
+		Source on GitHub
+		<span
+			aria-hidden="true"
+			class="transition-transform duration-200 ease-snappy group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+			>↗</span
+		>
 	</a>
 </footer>
